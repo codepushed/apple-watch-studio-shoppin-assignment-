@@ -1,9 +1,13 @@
 import React from "react";
 
+import AppBar from "../Components/AppBar";
+
 const Landing = () => {
   return (
-    <div>hey</div>
+    <div>
+      <AppBar />
+    </div>
   );
-}
+};
 
 export default Landing;
