@@ -1,6 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 
 const WatchStudioHero = () => {
+  const [isShrunk, setIsShrunk] = useState(false);
+
+  const handleButtonClick = () => {
+    setIsShrunk(true);
+  };
+
   return (
     <div className="watchStudioHeroContainer">
       <div className="watchStudioHeroContent">
@@ -13,12 +19,19 @@ const WatchStudioHero = () => {
             <h1>Create your own style.</h1>
           </span>
 
-          <div className="watchStudioBtn">
-            <button className="appleBlueBtn">Get started</button>
-          </div>
+          {!isShrunk && (
+            <div className="watchStudioBtn">
+              <button
+                className="appleBlueBtn"
+                onClick={() => handleButtonClick()}
+              >
+                Get started
+              </button>
+            </div>
+          )}
         </div>
 
-        <div className="watchStudioHeroImg">
+        <div className={`watchStudioHeroImg ${isShrunk ? "shrink" : ""}`}>
           <div className="watchStudioDial">
             <img src="/assets/watch-band.jpeg" alt="watch-dial" />
           </div>

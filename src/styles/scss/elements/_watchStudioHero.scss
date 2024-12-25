@@ -31,12 +31,14 @@
 
 .watchStudioHeroImg {
   position: relative;
- width: 900px;
+  width: 900px;
+  transition: transform 1.5s ease, width 1.5s ease, top 1.5s ease;
 }
 
 .watchStudioDial {
   height: auto;
   position: absolute;
+  transition: all 1.5s ease;
 }
 
 .watchStudioDial > img {
@@ -48,10 +50,16 @@
 .watchStudioCase {
   height: auto;
   position: absolute;
+  transition: all 1.5s ease;
 }
 
 .watchStudioCase > img {
   height: 100%;
   width: 100%;
   object-fit: cover;
+}
+
+.shrink {
+  transform: translateY(-40vh);
+  width: 500px; 
 }
