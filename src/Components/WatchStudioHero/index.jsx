@@ -60,13 +60,17 @@ const WatchStudioHero = () => {
         <>
           <CarouselWithSnap setCenteredDial={setCenteredDial} />
           <div className="watchDetailsContainer">
-            <p>Side view</p>
-            <p>Apple Watch {centeredDial?.model}</p>
-            <p>
-              {centeredDial?.model} {centeredDial?.name} with{" "}
+            <p className="watchDetailsView">Side view</p>
+            <p className="watchDetailsName">
+              Apple Watch {centeredDial?.model}
+            </p>
+            <p className="watchDetailsMore">
+              {centeredDial?.size} <span>mm</span> {centeredDial?.model}{" "}
+              {centeredDial?.name}
+              <span>with</span>
               {centeredDial?.band}
             </p>
-            <p>From ${centeredDial?.price}</p>
+            <p className="watchDetailsPrice">From ${centeredDial?.price}</p>
           </div>
           <Tabs />
         </>
