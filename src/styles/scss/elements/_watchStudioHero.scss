@@ -93,6 +93,15 @@
   animation: fadeIn 1.5s forwards;
 }
 
+.watchDetailsContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  flex-direction: column;
+  padding-top: 2vh;
+}
+
 @keyframes fadeIn {
   0% {
     opacity: 0;

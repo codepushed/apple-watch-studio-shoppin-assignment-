@@ -1,5 +1,6 @@
 .tabsContainer {
   width: 100%;
+  margin-top: 70px;
 }
 
 .tabs {
@@ -19,14 +20,21 @@
   width: 160px;
 }
 
+.case-button.expandedList {
+  width: 880px;
+}
+
 .caseTypes {
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
-
 .watchCaseTypeActive {
   font-weight: 700 !important;
-  font-family: 'Sfpro-medium', sans-serif;
+  font-family: "Sfpro-medium", sans-serif;
+}
+
+.bandTypes {
+  gap: 10px;
 }

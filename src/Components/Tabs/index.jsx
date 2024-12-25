@@ -1,11 +1,23 @@
+import { getBandsType } from "@/helpers";
+import { watchBands } from "@/Static";
 import React, { useState } from "react";
 
 const Tabs = () => {
   const [isExpanded, setIsExpanded] = useState(false);
   const [isActive, setIsActive] = useState(false);
+  const [listBands, setListBands] = useState(false);
+  const [selectedWatchBands, setSelectedWatchBands] = useState({
+    type: "Sport Band",
+  });
+
+  const watchBandTypes = getBandsType(watchBands);
 
   const handleActive = (material) => {
     setIsActive(material);
+  };
+
+  const handleWatchBands = (item) => {
+    setSelectedWatchBands(item);
   };
 
   return (
@@ -41,9 +53,29 @@ const Tabs = () => {
             "Case"
           )}
         </buttons>
-        <buttons className="btnsWithIcons">
+        <buttons
+          className={`btnsWithIcons bandTypes case-button ${
+            listBands ? "expandedList" : ""
+          }`}
+          onClick={() => setListBands(true)}
+        >
           <img src="/icons/bands.svg" alt="watch-bands" />
-          Band
+
+          {listBands
+            ? watchBandTypes?.map((item, index) => (
+                <p
+                  key={index}
+                  onClick={() => handleWatchBands(item)}
+                  className={
+                    selectedWatchBands?.type === item?.type
+                      ? "watchCaseTypeActive"
+                      : ""
+                  }
+                >
+                  {item?.type}
+                </p>
+              ))
+            : "Band"}
         </buttons>
       </div>
     </div>

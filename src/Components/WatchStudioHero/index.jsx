@@ -59,15 +59,7 @@ const WatchStudioHero = () => {
       {isTransitionComplete && (
         <>
           <CarouselWithSnap setCenteredDial={setCenteredDial} />
-          <div
-            style={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              width: "100%",
-              flexDirection: "column",
-            }}
-          >
+          <div className="watchDetailsContainer">
             <p>Side view</p>
             <p>Apple Watch {centeredDial?.model}</p>
             <p>
