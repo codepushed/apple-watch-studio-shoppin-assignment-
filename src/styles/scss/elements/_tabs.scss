@@ -8,3 +8,13 @@
   justify-content: center;
   gap: 10px;
 }
+
+.case-button {
+  width: 60px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.case-button.expanded {
+  width: 160px;
+}
