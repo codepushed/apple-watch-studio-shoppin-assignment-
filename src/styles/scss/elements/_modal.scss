@@ -1,0 +1,20 @@
+.modalTypography {
+  margin: 20px 0;
+  text-align: center;
+  cursor: pointer;
+  color: #1d1d1f;
+  font-weight: 300 !important;
+  letter-spacing: 0.011em;
+  line-height: 1.4705882353;
+  font-family: "Sfpro-regular", sans-serif;
+  opacity: 0.9;
+  font-size: 17px;
+}
+
+.modalTypography:hover {
+  color: #06c;
+}
+
+.collectionActive {
+    color: #86868b;
+}

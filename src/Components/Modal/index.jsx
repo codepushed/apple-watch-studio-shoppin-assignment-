@@ -1,23 +1,29 @@
-import React from "react";
+import React, { useState } from "react";
 import Box from "@mui/material/Box";
-import Button from "@mui/material/Button";
+import Divider from "@mui/material/Divider";
 import Typography from "@mui/material/Typography";
 import Modals from "@mui/material/Modal";
 
+import { collections } from "../../Static";
+
 const style = {
   position: "absolute",
-  top: "50%",
+  top: "17%",
   left: "50%",
   transform: "translate(-50%, -50%)",
-  width: 400,
+  width: 260,
   bgcolor: "background.paper",
-  border: "2px solid #000",
-  boxShadow: 24,
-  p: 4,
+  padding: "2px 26px",
+  borderRadius: "25px",
 };
 
 const Modal = ({ open, handleClose }) => {
- 
+  const [isActive, setIsActive] = useState(0);
+
+  const handleCollectionActive = (index) => {
+    setIsActive(index);
+  };
+
   return (
     <div>
       <Modals
@@ -27,12 +33,22 @@ const Modal = ({ open, handleClose }) => {
         aria-describedby="modal-modal-description"
       >
         <Box sx={style}>
-          <Typography id="modal-modal-title" variant="h6" component="h2">
-            Text in a modal
-          </Typography>
-          <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-            Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
-          </Typography>
+          {collections?.map((item, index) => (
+            <div key={index}>
+              <Typography
+                id="modal-modal-title"
+                className={
+                  isActive === index
+                    ? "modalTypography collectionActive"
+                    : "modalTypography"
+                }
+                onClick={() => handleCollectionActive(index)}
+              >
+                {item}
+              </Typography>
+              {index !== 2 && <Divider />}
+            </div>
+          ))}
         </Box>
       </Modals>
     </div>

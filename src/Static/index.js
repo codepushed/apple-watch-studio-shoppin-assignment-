@@ -383,3 +383,9 @@ export const watchBands = [
 // logic
 // if the dial is limited edition it will show the dial listing according to edition
 // other the same ordinary dials
+
+export const collections = [
+  "Apple Watch Series 10",
+  "Apple Watch Hermès Series 10",
+  "Apple Watch SE",
+];
