@@ -6,8 +6,9 @@
   justify-content: center;
 }
 
-.watchStudioBtn {
-  padding-top: 43px;
+.watchStudioHeroContent {
+  text-align: left;
+  z-index: 1;
 }
 
 .watchStudioHeroHeading {
@@ -29,10 +30,18 @@
   padding-bottom: 10px;
 }
 
+.watchStudioBtn {
+  padding-top: 43px;
+}
+
 .watchStudioHeroImg {
-  position: relative;
+  position: absolute;
   width: 900px;
   transition: transform 1.5s ease, width 1.5s ease, top 1.5s ease;
+  margin-top: 50px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .watchStudioDial {
@@ -59,7 +68,36 @@
   object-fit: cover;
 }
 
+.watchStudioCaseListing {
+  height: auto;
+  position: absolute;
+  transition: all 1.5s ease;
+}
+
+.watchStudioCaseListing > img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
 .shrink {
-  transform: translateY(-30vh);
-  width: 500px;
+  width: 800px;
+  position: fixed;
+  top: 42%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-30vh) scale(0.5);
+  z-index: 10;
+}
+
+.new-component {
+  animation: fadeIn 1.5s forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }

@@ -1,0 +1,16 @@
+.carouselContainer {
+  width: 100%;
+}
+
+.carouselWatchCaseContainer {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  z-index: 1;
+  overflow-x: scroll;
+  width: 900px;
+  transition: transform 1.5s ease, width 1.5s ease, top 1.5s ease;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
