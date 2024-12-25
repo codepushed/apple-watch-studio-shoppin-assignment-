@@ -20,6 +20,16 @@ const Tabs = () => {
     setSelectedWatchBands(item);
   };
 
+  const handleWatchCase = () => {
+    setIsExpanded(true);
+    setListBands(false);
+  };
+
+  const handleBandClicked = () => {
+    setIsExpanded(false);
+    setListBands(true);
+  };
+
   return (
     <div className="tabsContainer">
       <div className="tabs">
@@ -31,7 +41,7 @@ const Tabs = () => {
           className={`btnsWithIcons case-button ${
             isExpanded ? "expanded" : ""
           }`}
-          onClick={() => setIsExpanded(true)}
+          onClick={() => handleWatchCase()}
         >
           <img src="/icons/case.svg" alt="watch-case" />
           {isExpanded ? (
@@ -57,7 +67,7 @@ const Tabs = () => {
           className={`btnsWithIcons bandTypes case-button ${
             listBands ? "expandedList" : ""
           }`}
-          onClick={() => setListBands(true)}
+          onClick={() => handleBandClicked()}
         >
           <img src="/icons/bands.svg" alt="watch-bands" />
 
