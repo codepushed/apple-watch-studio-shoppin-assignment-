@@ -1,20 +1,33 @@
-import React, { useRef } from "react";
+import React, { useRef, useEffect } from "react";
 
 import { watches } from "../../Static";
 
 const CarouselWithBounce = () => {
   const carouselRef = useRef(null);
 
+  useEffect(() => {
+    const carousel = carouselRef.current;
+    if (carousel) {
+      const itemWidth = carousel.offsetWidth / 3;
+      const centerIndex = Math.floor(watches.length / 2); 
+      const targetScrollPosition = centerIndex * itemWidth;
+
+      carousel.scrollTo({
+        left: targetScrollPosition - carousel.offsetWidth / 2,
+        behavior: "smooth",
+      });
+    }
+  }, []);
+
   const scrollToNearestWithBounce = () => {
     if (carouselRef.current) {
       const carousel = carouselRef.current;
       const scrollPosition = carousel.scrollLeft;
-      const itemWidth = carousel.offsetWidth / 3; // Assuming 3 items fit in the view
+      const itemWidth = carousel.offsetWidth / 3;
       const nearestIndex = Math.round(scrollPosition / itemWidth);
 
       const targetScrollPosition = nearestIndex * itemWidth;
 
-      // Temporarily overshoot for bounce effect
       const overshoot = targetScrollPosition > scrollPosition ? 20 : -20;
 
       carousel.scrollTo({
@@ -27,7 +40,7 @@ const CarouselWithBounce = () => {
           left: targetScrollPosition,
           behavior: "smooth",
         });
-      }, 300); // Delay to snap back
+      }, 300);
     }
   };
 
@@ -46,18 +59,16 @@ const CarouselWithBounce = () => {
 
   return (
     <div className="carouselContainer">
-      {/* Background Band */}
       <div className="bandImage">
         <img src="/assets/watch-band.jpeg" alt="watch-band" />
       </div>
 
-      {/* Carousel */}
       <div className="carouselWrapper">
         <button
           className="carouselButton left"
           onClick={() => scrollToDirection("left")}
         >
-          {"<"}
+          <img src="/icons/leftArrow.svg" alt="left-arrow" />
         </button>
         <div
           className="carousel"
@@ -75,7 +86,7 @@ const CarouselWithBounce = () => {
           className="carouselButton right"
           onClick={() => scrollToDirection("right")}
         >
-          {">"}
+          <img src="/icons/rightArrow.svg" alt="right-arrow" />
         </button>
       </div>
     </div>
