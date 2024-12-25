@@ -18,3 +18,15 @@
 .case-button.expanded {
   width: 160px;
 }
+
+.caseTypes {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+
+.watchCaseTypeActive {
+  font-weight: 700 !important;
+  font-family: 'Sfpro-medium', sans-serif;
+}
