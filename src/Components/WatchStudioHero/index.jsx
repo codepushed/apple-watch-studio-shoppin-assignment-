@@ -1,17 +1,19 @@
 import React, { useState } from "react";
 
 import CarouselWithSnap from "../CarouselWithSnap";
+import Tabs from "../Tabs";
 
 const WatchStudioHero = () => {
   const [isShrunk, setIsShrunk] = useState(false);
   const [isTransitionComplete, setIsTransitionComplete] = useState(false);
+  const [centeredDial, setCenteredDial] = useState(null);
 
   const handleButtonClick = () => {
     setIsShrunk(true);
   };
 
   const handleTransitionEnd = () => {
-    setIsTransitionComplete(true); // Mark the transition as complete when it ends
+    setIsTransitionComplete(true);
   };
 
   return (
@@ -42,7 +44,7 @@ const WatchStudioHero = () => {
       {!isTransitionComplete && (
         <div
           className={`watchStudioHeroImg ${isShrunk ? "shrink" : ""}`}
-          onTransitionEnd={handleTransitionEnd} // Listen for the transition end
+          onTransitionEnd={handleTransitionEnd}
         >
           <div className="watchStudioDial">
             <img src="/assets/watch-band.jpeg" alt="watch-dial" />
@@ -54,7 +56,29 @@ const WatchStudioHero = () => {
         </div>
       )}
 
-      {isTransitionComplete && <CarouselWithSnap />}
+      {isTransitionComplete && (
+        <>
+          <CarouselWithSnap setCenteredDial={setCenteredDial} />
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              width: "100%",
+              flexDirection: "column",
+            }}
+          >
+            <p>Side view</p>
+            <p>Apple Watch {centeredDial?.model}</p>
+            <p>
+              {centeredDial?.model} {centeredDial?.name} with{" "}
+              {centeredDial?.band}
+            </p>
+            <p>From ${centeredDial?.price}</p>
+          </div>
+          <Tabs />
+        </>
+      )}
     </div>
   );
 };

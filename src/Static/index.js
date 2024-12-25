@@ -1,6 +1,6 @@
 export const watches = [
   {
-    model: "series 10",
+    model: "Series 10",
     price: 429,
     size: 46,
     name: "Silver Aluminum",
@@ -9,7 +9,7 @@ export const watches = [
     img: "/assets/dials/watch-case-46-aluminum-silver-nc-s10_VW_PF+watch-face-46-aluminum-silver-s10_VW_PF.png",
   },
   {
-    model: "series 10",
+    model: "Series 10",
     price: 429,
     size: 46,
     name: "Rose Gold Aluminum",
@@ -18,7 +18,7 @@ export const watches = [
     img: "/assets/dials/watch-case-46-aluminum-rosegold-nc-s10_VW_PF+watch-face-46-aluminum-rosegold-s10_VW_PF.png",
   },
   {
-    model: "series 10",
+    model: "Series 10",
     price: 429,
     size: 46,
     name: "Jet Black Aluminum",
@@ -27,7 +27,7 @@ export const watches = [
     img: "/assets/dials/watch-case-46-aluminum-jetblack-nc-s10_VW_PF+watch-face-46-aluminum-jetblack-s10_VW_PF.png",
   },
   {
-    model: "series 10",
+    model: "Series 10",
     price: 749,
     size: 46,
     name: "Natural Titanium",
@@ -36,7 +36,7 @@ export const watches = [
     img: "/assets/dials/watch-case-46-titanium-natural-cell-s10_VW_PF+watch-face-46-titanium-natural-s10_VW_PF.png",
   },
   {
-    model: "series 10",
+    model: "Series 10",
     price: 749,
     size: 46,
     name: "Gold Titanium",
@@ -45,7 +45,7 @@ export const watches = [
     img: "/assets/dials/watch-case-46-titanium-gold-cell-s10_VW_PF+watch-face-46-titanium-gold-s10_VW_PF.png",
   },
   {
-    model: "series 10",
+    model: "Series 10",
     price: 749,
     size: 46,
     name: "Slate Titanium",
