@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 import Tabs from "../Tabs";
 import Carousel from "../Carousel";
+import CarouselWithSnap from "@/CarouselWithSnap";
 
 const WatchStudioHero = () => {
   const [isShrunk, setIsShrunk] = useState(false);
@@ -55,7 +56,7 @@ const WatchStudioHero = () => {
         </div>
       )}
 
-      {isTransitionComplete && <Carousel />}
+      {isTransitionComplete && <CarouselWithSnap />}
     </div>
   );
 };
