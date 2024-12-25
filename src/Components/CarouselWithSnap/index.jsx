@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
-import { watches } from "../Static";
+
+import { watches } from "../../Static";
 
 const CarouselWithBounce = () => {
   const carouselRef = useRef(null);
