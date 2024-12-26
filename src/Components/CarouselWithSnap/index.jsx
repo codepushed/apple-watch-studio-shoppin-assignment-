@@ -2,7 +2,7 @@ import React, { useRef, useEffect } from "react";
 
 import { watches } from "../../Static";
 
-const CarouselWithBounce = ({ setCenteredDial }) => {
+const CarouselWithSnap = ({ setCenteredDial }) => {
   const carouselRef = useRef(null);
 
   const calculateCenterDial = () => {
@@ -11,8 +11,8 @@ const CarouselWithBounce = ({ setCenteredDial }) => {
       const scrollPosition = carousel.scrollLeft;
       const itemWidth = carousel.offsetWidth / 3;
 
-      let nearestDial = null;
-      let minDistance = Infinity;
+      const nearestDial = null;
+      const minDistance = Infinity;
 
       const items = carousel.querySelectorAll(".dialItem");
 
@@ -68,6 +68,8 @@ const CarouselWithBounce = ({ setCenteredDial }) => {
 
       const overshoot = targetScrollPosition > scrollPosition ? 20 : -20;
 
+      setCenteredDial(watches[nearestIndex]);
+
       carousel.scrollTo({
         left: targetScrollPosition + overshoot,
         behavior: "smooth",
@@ -81,6 +83,22 @@ const CarouselWithBounce = ({ setCenteredDial }) => {
       }, 300);
     }
   };
+
+  useEffect(() => {
+    const carousel = carouselRef.current;
+    if (carousel) {
+      const itemWidth = carousel.offsetWidth / 3;
+      const centerIndex = 2;
+      const targetScrollPosition = centerIndex * itemWidth;
+
+      carousel.scrollTo({
+        left: targetScrollPosition - carousel.offsetWidth / 2,
+        behavior: "smooth",
+      });
+
+      setCenteredDial(watches[centerIndex]);
+    }
+  }, []);
 
   const scrollToDirection = (direction) => {
     if (carouselRef.current) {
@@ -131,4 +149,4 @@ const CarouselWithBounce = ({ setCenteredDial }) => {
   );
 };
 
-export default CarouselWithBounce;
+export default CarouselWithSnap;

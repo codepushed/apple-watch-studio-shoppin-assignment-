@@ -5,3 +5,7 @@ export const getBandsType = (items) => {
       ))
     );
   };
+
+ export const getBandsByType = (items, type) => {
+    return items.filter(item => item.type === type);
+  };

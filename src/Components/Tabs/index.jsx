@@ -1,8 +1,8 @@
-import { getBandsType } from "@/helpers";
+import { getBandsByType, getBandsType } from "@/helpers";
 import { watchBands } from "@/Static";
 import React, { useState } from "react";
 
-const Tabs = () => {
+const Tabs = ({ handleCases }) => {
   const [isExpanded, setIsExpanded] = useState(false);
   const [isActive, setIsActive] = useState(false);
   const [listBands, setListBands] = useState(false);
@@ -23,12 +23,15 @@ const Tabs = () => {
   const handleWatchCase = () => {
     setIsExpanded(true);
     setListBands(false);
+    handleCases();
   };
 
   const handleBandClicked = () => {
     setIsExpanded(false);
     setListBands(true);
   };
+
+  // console.log(getBandsByType(watchBands, selectedWatchBands?.type))
 
   return (
     <div className="tabsContainer">

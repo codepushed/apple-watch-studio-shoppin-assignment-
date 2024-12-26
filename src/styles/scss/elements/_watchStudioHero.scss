@@ -100,11 +100,13 @@
   width: 100%;
   flex-direction: column;
   padding-top: 2vh;
+  position: absolute;
+  bottom: 20%;
 }
 
 .watchDetailsView {
   color: #06c;
-  font-size: 15px;
+  font-size: 13px;
   text-decoration: underline;
   font-family: "Sfpro-light", sans-serif;
   margin-bottom: 12px;
