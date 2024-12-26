@@ -1,44 +1,98 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useState } from "react";
 
 import { watches } from "../../Static";
 
 const CarouselWithSnap = ({ setCenteredDial }) => {
   const carouselRef = useRef(null);
+  const [canScrollLeft, setCanScrollLeft] = useState(false);
+  const [canScrollRight, setCanScrollRight] = useState(true);
 
-  const calculateCenterDial = () => {
+  const updateScrollButtons = () => {
     if (carouselRef.current) {
       const carousel = carouselRef.current;
+      setCanScrollLeft(carousel.scrollLeft > 0);
+      setCanScrollRight(
+        carousel.scrollLeft < carousel.scrollWidth - carousel.offsetWidth
+      );
+    }
+  };
+
+  const scrollToDirection = (direction) => {
+    if (carouselRef.current) {
+      const carousel = carouselRef.current;
+      const itemWidth = carousel.offsetWidth / 2;
       const scrollPosition = carousel.scrollLeft;
-      const itemWidth = carousel.offsetWidth / 3;
+      const totalItems = watches.length;
 
-      const nearestDial = null;
-      const minDistance = Infinity;
+      let targetIndex =
+        direction === "left"
+          ? Math.floor(scrollPosition / itemWidth) - 1
+          : Math.floor(scrollPosition / itemWidth) + 1;
 
-      const items = carousel.querySelectorAll(".dialItem");
+      targetIndex = Math.max(0, Math.min(totalItems - 1, targetIndex));
 
-      items.forEach((item, index) => {
-        const itemPosition = item.offsetLeft;
-        const distanceToCenter = Math.abs(
-          itemPosition - scrollPosition - itemWidth
-        );
+      const targetScrollPosition =
+        targetIndex * itemWidth - (carousel.offsetWidth / 2 - itemWidth / 2);
 
-        if (distanceToCenter < minDistance) {
-          minDistance = distanceToCenter;
-          nearestDial = watches[index];
-        }
+      carousel.scrollTo({
+        left: targetScrollPosition,
+        behavior: "smooth",
       });
 
-      setCenteredDial(nearestDial);
+      setCenteredDial(watches[targetIndex]);
+    }
+  };
+
+  const handleDialClick = (index) => {
+    if (carouselRef.current) {
+      const carousel = carouselRef.current;
+      const itemWidth = carousel.offsetWidth / 2;
+      const targetScrollPosition =
+        index * itemWidth - (carousel.offsetWidth / 2 - itemWidth / 2);
+
+      carousel.scrollTo({
+        left: targetScrollPosition,
+        behavior: "smooth",
+      });
+
+      setCenteredDial(watches[index]);
+    }
+  };
+
+  const scrollToNearestWithBounce = () => {
+    if (carouselRef.current) {
+      const carousel = carouselRef.current;
+      const itemWidth = 400;
+      const scrollPosition = carousel.scrollLeft;
+      const nearestIndex = Math.round(scrollPosition / itemWidth);
+      const visibleWidth = carousel.offsetWidth;
+      const maxScrollPosition =
+        (watches.length - 1) * itemWidth - (visibleWidth / 2 - itemWidth / 2);
+
+      const targetScrollPosition = nearestIndex * itemWidth;
+
+      const clampedScrollPosition = Math.min(
+        targetScrollPosition,
+        maxScrollPosition
+      );
+
+      carousel.scrollTo({
+        left: clampedScrollPosition,
+        behavior: "smooth",
+      });
+
+      setCenteredDial(watches[nearestIndex]);
     }
   };
 
   useEffect(() => {
     if (carouselRef.current) {
-      carouselRef.current.addEventListener("scroll", calculateCenterDial);
+      carouselRef.current.addEventListener("scroll", updateScrollButtons);
     }
+
     return () => {
       if (carouselRef.current) {
-        carouselRef.current.removeEventListener("scroll", calculateCenterDial);
+        carouselRef.current.removeEventListener("scroll", updateScrollButtons);
       }
     };
   }, []);
@@ -54,64 +108,55 @@ const CarouselWithSnap = ({ setCenteredDial }) => {
         left: targetScrollPosition - carousel.offsetWidth / 2,
         behavior: "smooth",
       });
-    }
-  }, []);
-
-  const scrollToNearestWithBounce = () => {
-    if (carouselRef.current) {
-      const carousel = carouselRef.current;
-      const scrollPosition = carousel.scrollLeft;
-      const itemWidth = carousel.offsetWidth / 3;
-      const nearestIndex = Math.round(scrollPosition / itemWidth);
-
-      const targetScrollPosition = nearestIndex * itemWidth;
-
-      const overshoot = targetScrollPosition > scrollPosition ? 20 : -20;
-
-      setCenteredDial(watches[nearestIndex]);
-
-      carousel.scrollTo({
-        left: targetScrollPosition + overshoot,
-        behavior: "smooth",
-      });
-
-      setTimeout(() => {
-        carousel.scrollTo({
-          left: targetScrollPosition,
-          behavior: "smooth",
-        });
-      }, 300);
-    }
-  };
-
-  useEffect(() => {
-    const carousel = carouselRef.current;
-    if (carousel) {
-      const itemWidth = carousel.offsetWidth / 3;
-      const centerIndex = 2;
-      const targetScrollPosition = centerIndex * itemWidth;
-
-      carousel.scrollTo({
-        left: targetScrollPosition - carousel.offsetWidth / 2,
-        behavior: "smooth",
-      });
 
       setCenteredDial(watches[centerIndex]);
     }
   }, []);
 
-  const scrollToDirection = (direction) => {
+  useEffect(() => {
     if (carouselRef.current) {
       const carousel = carouselRef.current;
-      const itemWidth = carousel.offsetWidth / 3;
-      const scrollAmount = direction === "left" ? -itemWidth : itemWidth;
+      const itemWidth = 400;
+      const containerWidth = carousel.offsetWidth;
 
-      carousel.scrollBy({
-        left: scrollAmount,
+      const padding = containerWidth / 2 - itemWidth / 2;
+      carousel.style.paddingLeft = `${padding}px`;
+      carousel.style.paddingRight = `${padding}px`;
+    }
+  }, []);
+
+  useEffect(() => {
+    const updatePadding = () => {
+      if (carouselRef.current) {
+        const carousel = carouselRef.current;
+        const itemWidth = 400;
+        const containerWidth = carousel.offsetWidth;
+
+        const padding = containerWidth / 2 - itemWidth / 2;
+        carousel.style.paddingLeft = `${padding}px`;
+        carousel.style.paddingRight = `${padding}px`;
+      }
+    };
+
+    updatePadding();
+
+    window.addEventListener("resize", updatePadding);
+
+    return () => {
+      window.removeEventListener("resize", updatePadding);
+    };
+  }, []);
+
+  useEffect(() => {
+    if (carouselRef.current) {
+      const carousel = carouselRef.current;
+      const itemWidth = 400;
+      carousel.scrollTo({
+        left: 0,
         behavior: "smooth",
       });
     }
-  };
+  }, []);
 
   return (
     <div className="carouselContainer">
@@ -123,6 +168,7 @@ const CarouselWithSnap = ({ setCenteredDial }) => {
         <button
           className="carouselButton left"
           onClick={() => scrollToDirection("left")}
+          style={{ display: canScrollLeft ? "block" : "none" }}
         >
           <img src="/icons/leftArrow.svg" alt="left-arrow" />
         </button>
@@ -131,9 +177,18 @@ const CarouselWithSnap = ({ setCenteredDial }) => {
           ref={carouselRef}
           onTouchEnd={scrollToNearestWithBounce}
           onMouseUp={scrollToNearestWithBounce}
+          style={{
+            scrollbarWidth: "none",
+            msOverflowStyle: "none",
+            WebkitOverflowScrolling: "touch",
+          }}
         >
           {watches.map((item, index) => (
-            <div className="dialItem" key={index}>
+            <div
+              className="dialItem"
+              key={index}
+              onClick={() => handleDialClick(index)}
+            >
               <img src={item.img} alt={item.name} />
             </div>
           ))}
@@ -141,6 +196,7 @@ const CarouselWithSnap = ({ setCenteredDial }) => {
         <button
           className="carouselButton right"
           onClick={() => scrollToDirection("right")}
+          style={{ display: canScrollRight ? "block" : "none" }}
         >
           <img src="/icons/rightArrow.svg" alt="right-arrow" />
         </button>
