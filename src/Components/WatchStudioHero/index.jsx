@@ -16,6 +16,8 @@ const WatchStudioHero = () => {
     setIsShrunk(true);
   };
 
+console.log(centeredDial, "center")
+
   const handleTransitionEnd = () => {
     setIsTransitionComplete(true);
   };
