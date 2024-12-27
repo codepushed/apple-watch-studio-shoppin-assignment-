@@ -14,6 +14,7 @@ const WatchStudioHero = () => {
   const [isFading, setIsFading] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [toggleSize, setToggleSize] = useState(false);
+  const [watchView, setWatchView] = useState(false);
 
   const handleButtonClick = () => {
     setIsLoading(true);
@@ -93,7 +94,12 @@ const WatchStudioHero = () => {
             )}
 
             <div className="watchDetailsContainer">
-              <p className="watchDetailsView">Side view</p>
+              <p
+                className="watchDetailsView"
+                onClick={() => setWatchView(!watchView)}
+              >
+                {!watchView ? "Side view" : "Front view"}
+              </p>
               <p className="watchDetailsName">
                 Apple Watch {centeredDial?.model}
               </p>
