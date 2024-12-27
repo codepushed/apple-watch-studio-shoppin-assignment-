@@ -4,6 +4,7 @@ import CarouselWithSnap from "../CarouselWithSnap";
 import Tabs from "../Tabs";
 
 import { watches } from "../../Static";
+import AppBar from "../AppBar";
 
 const WatchStudioHero = () => {
   const [isShrunk, setIsShrunk] = useState(false);
@@ -34,76 +35,79 @@ const WatchStudioHero = () => {
   };
 
   return (
-    <div className="watchStudioHeroContainer">
-      {!isShrunk && !isFading && (
-        <div className={isLoading ? "fadeEffect" : "watchStudioHeroContent"}>
-          <div className="watchStudioHeroTypography">
-            <h3>Apple Watch Studio</h3>
+    <div>
+      <AppBar showOptions={isShrunk} />
+      <div className="watchStudioHeroContainer">
+        {!isShrunk && !isFading && (
+          <div className={isLoading ? "fadeEffect" : "watchStudioHeroContent"}>
+            <div className="watchStudioHeroTypography">
+              <h3>Apple Watch Studio</h3>
 
-            <span className="watchStudioHeroHeading">
-              <h1>Choose a case.</h1>
-              <h1>Pick a band.</h1>
-              <h1>Create your own style.</h1>
-            </span>
+              <span className="watchStudioHeroHeading">
+                <h1>Choose a case.</h1>
+                <h1>Pick a band.</h1>
+                <h1>Create your own style.</h1>
+              </span>
 
-            <div className="watchStudioBtn">
-              <button
-                className="appleBlueBtn"
-                onClick={() => handleButtonClick()}
-              >
-                Get started
-              </button>
+              <div className="watchStudioBtn">
+                <button
+                  className="appleBlueBtn"
+                  onClick={() => handleButtonClick()}
+                >
+                  Get started
+                </button>
+              </div>
             </div>
           </div>
-        </div>
-      )}
+        )}
 
-      {!isCarouselVisible && (
-        <div
-          className={`watchStudioHeroImg ${isShrunk ? "shrink" : ""}`}
-          onTransitionEnd={handleTransitionEnd}
-        >
-          <div className="watchStudioDial">
-            <img
-              src="/assets/watch-band.jpeg"
-              alt="watch-dial"
-              className={isFading ? "fadeEffect" : ""}
-            />
+        {!isCarouselVisible && (
+          <div
+            className={`watchStudioHeroImg ${isShrunk ? "shrink" : ""}`}
+            onTransitionEnd={handleTransitionEnd}
+          >
+            <div className="watchStudioDial">
+              <img
+                src="/assets/watch-band.jpeg"
+                alt="watch-dial"
+                className={isFading ? "fadeEffect" : ""}
+              />
+            </div>
+
+            <div className="watchStudioCase">
+              <img
+                src={centeredDial?.img}
+                alt="watch-case"
+                className={isFading ? "fadeEffect" : ""}
+              />
+            </div>
           </div>
+        )}
 
-          <div className="watchStudioCase">
-            <img
-              src={centeredDial?.img}
-              alt="watch-case"
-              className={isFading ? "fadeEffect" : ""}
-            />
-          </div>
-        </div>
-      )}
+        {isTransitionComplete && !isFading && (
+          <>
+            {isCarouselVisible && (
+              <CarouselWithSnap setCenteredDial={setCenteredDial} />
+            )}
 
-      {isTransitionComplete && !isFading && (
-        <>
-          {isCarouselVisible && (
-            <CarouselWithSnap setCenteredDial={setCenteredDial} />
-          )}
+            <div className="watchDetailsContainer">
+              <p className="watchDetailsView">Side view</p>
+              <p className="watchDetailsName">
+                Apple Watch {centeredDial?.model}
+              </p>
+              <p className="watchDetailsMore">
+                {centeredDial?.size} <span>mm</span> {centeredDial?.model}{" "}
+                {centeredDial?.name}
+                <span>with</span>
+                {centeredDial?.band}
+              </p>
+              <p className="watchDetailsPrice">From ${centeredDial?.price}</p>
+            </div>
 
-          <div className="watchDetailsContainer">
-            <p className="watchDetailsView">Side view</p>
-            <p className="watchDetailsName">
-              Apple Watch {centeredDial?.model}
-            </p>
-            <p className="watchDetailsMore">
-              {centeredDial?.size} <span>mm</span> {centeredDial?.model}{" "}
-              {centeredDial?.name}
-              <span>with</span>
-              {centeredDial?.band}
-            </p>
-            <p className="watchDetailsPrice">From ${centeredDial?.price}</p>
-          </div>
-
-          <Tabs handleCases={handleCases} />
-        </>
-      )}
+            <Tabs handleCases={handleCases} />
+          </>
+        )}
+      </div>
     </div>
   );
 };

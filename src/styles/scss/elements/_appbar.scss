@@ -10,6 +10,7 @@
 .appBarImgContainer {
     width: 90px;
     height: auto;
+    cursor: pointer;
 }
 
 .appBarImgContainer > img {
@@ -35,4 +36,12 @@
 
 .appBarSaveBtn {
     padding: unset !important;
+}
+
+.appBarHide {
+    visibility: hidden;
+}
+
+.appBarShow {
+    visibility: visible;
 }
