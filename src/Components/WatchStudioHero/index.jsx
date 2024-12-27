@@ -13,6 +13,7 @@ const WatchStudioHero = () => {
   const [isCarouselVisible, setIsCarouselVisible] = useState(false);
   const [isFading, setIsFading] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+  const [toggleSize, setToggleSize] = useState(false);
 
   const handleButtonClick = () => {
     setIsLoading(true);
@@ -24,6 +25,7 @@ const WatchStudioHero = () => {
 
   const handleTransitionEnd = () => {
     setIsTransitionComplete(true);
+    setToggleSize(true);
   };
 
   const handleCases = () => {
@@ -104,7 +106,12 @@ const WatchStudioHero = () => {
               <p className="watchDetailsPrice">From ${centeredDial?.price}</p>
             </div>
 
-            <Tabs handleCases={handleCases} />
+            <Tabs
+              handleCases={handleCases}
+              toggleSize={toggleSize}
+              setToggleSize={setToggleSize}
+              isFading={isFading}
+            />
           </>
         )}
       </div>

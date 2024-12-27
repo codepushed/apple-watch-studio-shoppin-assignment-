@@ -1,15 +1,14 @@
-import { getBandsByType, getBandsType } from "@/helpers";
+import React, { useEffect, useState } from "react";
+import { getBandsType } from "@/helpers";
 import { watchBands } from "@/Static";
-import React, { useState } from "react";
 
-const Tabs = ({ handleCases }) => {
+const Tabs = ({ handleCases, toggleSize, setToggleSize, isFading }) => {
   const [isExpanded, setIsExpanded] = useState(false);
   const [isActive, setIsActive] = useState(false);
   const [listBands, setListBands] = useState(false);
   const [selectedWatchBands, setSelectedWatchBands] = useState({
     type: "Sport Band",
   });
-
   const watchBandTypes = getBandsType(watchBands);
 
   const handleActive = (material) => {
@@ -31,14 +30,40 @@ const Tabs = ({ handleCases }) => {
     setListBands(true);
   };
 
-  // console.log(getBandsByType(watchBands, selectedWatchBands?.type))
+  useEffect(() => {
+    setTimeout(() => {
+      setToggleSize(false);
+    }, 1000);
+  }, []);
 
   return (
     <div className="tabsContainer">
       <div className="tabs">
-        <buttons className="btnsWithIcons">
+        <buttons
+          className={`btnsWithIcons case-button ${
+            toggleSize ? "expandedSize" : ""
+          }`}
+          onClick={() => setToggleSize(true)}
+        >
           <img src="/icons/watchSize.svg" alt="watch-size" />
-          Size
+          {toggleSize && !isFading ? (
+            <div className="caseTypes">
+              <p
+                onClick={() => handleActive("42mm")}
+                className={isActive === "42mm" ? "watchCaseTypeActive" : ""}
+              >
+                42mm
+              </p>
+              <p
+                onClick={() => handleActive("46mm")}
+                className={isActive === "46mm" ? "watchCaseTypeActive" : ""}
+              >
+                46mm
+              </p>
+            </div>
+          ) : (
+            "Size"
+          )}
         </buttons>
         <buttons
           className={`btnsWithIcons case-button ${
