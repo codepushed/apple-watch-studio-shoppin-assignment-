@@ -11,12 +11,15 @@ const WatchStudioHero = () => {
   const [centeredDial, setCenteredDial] = useState(watches[2]);
   const [isCarouselVisible, setIsCarouselVisible] = useState(false);
   const [isFading, setIsFading] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleButtonClick = () => {
-    setIsShrunk(true);
+    setIsLoading(true);
+    setTimeout(() => {
+      setIsLoading(false);
+      setIsShrunk(true);
+    }, 1000);
   };
-
-console.log(centeredDial, "center")
 
   const handleTransitionEnd = () => {
     setIsTransitionComplete(true);
@@ -33,7 +36,7 @@ console.log(centeredDial, "center")
   return (
     <div className="watchStudioHeroContainer">
       {!isShrunk && !isFading && (
-        <div className="watchStudioHeroContent">
+        <div className={isLoading ? "fadeEffect" : "watchStudioHeroContent"}>
           <div className="watchStudioHeroTypography">
             <h3>Apple Watch Studio</h3>
 

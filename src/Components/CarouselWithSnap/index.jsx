@@ -17,48 +17,52 @@ const CarouselWithSnap = ({ setCenteredDial }) => {
     }
   };
 
-  const applyMagneticPull = () => {
-    if (carouselRef.current) {
-      const carousel = carouselRef.current;
-      const itemWidth = 400;
-      const scrollPosition = carousel.scrollLeft;
-      const visibleWidth = carousel.offsetWidth;
+  // const applyMagneticPull = () => {
+  //   if (carouselRef.current) {
+  //     const carousel = carouselRef.current;
+  //     const itemWidth = 400;
+  //     const scrollPosition = carousel.scrollLeft;
+  //     const visibleWidth = carousel.offsetWidth;
+  
+  //     const nearestIndex = Math.round(scrollPosition / itemWidth);
+  //     const totalItems = watches.length;
+  //     const clampedIndex = Math.max(0, Math.min(nearestIndex, totalItems - 1));
+  //     const targetScrollPosition = 
+  //     clampedIndex * itemWidth - (visibleWidth / 2 - itemWidth / 2);
+  
+  //     carousel.scrollTo({
+  //       left: targetScrollPosition,
+  //       behavior: "smooth",
+  //     });
+  //     setCenteredDial(watches[clampedIndex]);
+  //   }
+  // };
+  
 
-      const nearestIndex = Math.round(scrollPosition / itemWidth);
-      const totalItems = watches.length;
-      const clampedIndex = Math.max(0, Math.min(nearestIndex, totalItems - 1));
-      const targetScrollPosition =
-        clampedIndex * itemWidth - (visibleWidth / 2 - itemWidth / 2);
+  // let scrollTimeout;
 
-      carousel.scrollTo({
-        left: targetScrollPosition,
-        behavior: "smooth",
-      });
-      setCenteredDial(watches[clampedIndex]);
-    }
-  };
+  // const handleScrollStop = () => {
+  //   clearTimeout(scrollTimeout);
+  //   scrollTimeout = setTimeout(() => {
+  //     applyMagneticPull(); 
+  //   }, 150);
+  // };
+  
+  
+  // useEffect(() => {
+  //   if (carouselRef.current) {
+  //     const carousel = carouselRef.current;
+  
+  //     const onScroll = () => handleScrollStop();
+  //     carousel.addEventListener("scroll", onScroll);
+  
 
-  let scrollTimeout;
-
-  const handleScrollStop = () => {
-    clearTimeout(scrollTimeout);
-    scrollTimeout = setTimeout(() => {
-      applyMagneticPull();
-    }, 150);
-  };
-
-  useEffect(() => {
-    if (carouselRef.current) {
-      const carousel = carouselRef.current;
-
-      const onScroll = () => handleScrollStop();
-      carousel.addEventListener("scroll", onScroll);
-
-      return () => {
-        carousel.removeEventListener("scroll", onScroll);
-      };
-    }
-  }, []);
+  //     return () => {
+  //       carousel.removeEventListener("scroll", onScroll);
+  //     };
+  //   }
+  // }, []);
+  
 
   const scrollToDirection = (direction) => {
     if (carouselRef.current) {
