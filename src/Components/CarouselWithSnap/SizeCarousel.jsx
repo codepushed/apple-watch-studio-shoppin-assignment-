@@ -18,7 +18,7 @@ const WatchCarousel = () => {
 
   const scrollTo = (direction) => {
     if (carouselRef.current) {
-      const scrollAmount = 300; // Pixels to scroll
+      const scrollAmount = 300;
       if (direction === "left") {
         carouselRef.current.scrollBy({
           left: -scrollAmount,
@@ -58,9 +58,13 @@ const WatchCarousel = () => {
       });
     }
   };
+
   return (
     <div>
-      <button className="carouselButton Sizeleft" onClick={() => scrollTo("left")}>
+      <button
+        className="carouselButton Sizeleft"
+        onClick={() => scrollTo("left")}
+      >
         <img src="/icons/leftArrow.svg" alt="left-arrow" />
       </button>
 
@@ -78,7 +82,7 @@ const WatchCarousel = () => {
             className={`watchItem ${watch.size}`}
             onClick={() => handleClick(index)}
           >
-            <div className="bandImage">
+            <div className="bandImages">
               <img src={watch.band} alt={`Watch Band ${index + 1}`} />
             </div>
             <div className="dialImage">
@@ -87,7 +91,6 @@ const WatchCarousel = () => {
           </div>
         ))}
       </div>
-     
     </div>
   );
 };

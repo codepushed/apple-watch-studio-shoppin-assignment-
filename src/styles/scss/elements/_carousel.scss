@@ -1,70 +1,68 @@
-// .carouselContainer {
-//   position: relative;
-//   width: 100%;
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-//   justify-content: center;
-//   overflow: hidden;
-// }
+.carouselContainer {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
 
-// .bandImage {
-//   position: absolute;
-//   top: 50%;
-//   left: 50%;
-//   transform: translate(-50%, -50%);
-//   z-index: 1;
-// }
+.bandImage {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
 
-// .bandImage img {
-//   width: 400px;
-//   height: auto;
-//   object-fit: cover;
-// }
+.bandImage img {
+  width: 400px;
+  height: auto;
+  object-fit: cover;
+}
 
-// .carouselWrapper {
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-//   position: relative;
-//   z-index: 2;
-//   width: 100%;
-// }
+.carouselWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+  width: 100%;
+}
 
-// .carousel {
-//   display: flex;
-//   overflow-x: auto;
-//   scroll-snap-type: none;
-//   // scroll-behavior: smooth;
-//   // -webkit-overflow-scrolling: touch;
-//   width: 100%;
-//   padding: 20px 0;
-//   transition: transform 0.8s ease-in-out;
-//   white-space: nowrap;
-//   transition: scroll-left 0.3s cubic-bezier(0.25, 1, 0.5, 1);
-// }
+.carousel {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: none;
+  width: 100%;
+  padding: 20px 0;
+  transition: transform 0.8s ease-in-out;
+  white-space: nowrap;
+  transition: scroll-left 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
 
-// .carousel::-webkit-scrollbar {
-//   display: none;
-// }
+.carousel::-webkit-scrollbar {
+  display: none;
+}
 
-// .dialItem {
-//   flex: 0 0 auto;
-//   scroll-snap-align: center;
-//   width: 400px;
-//   display: inline-block;
-//   justify-content: center;
-//   align-items: center;
-//   background: transparent;
-//   flex-shrink: 0;
-//   transition: transform .25s ease .2s, opacity .5s ease .2s;
-// }
+.dialItem {
+  flex: 0 0 auto;
+  scroll-snap-align: center;
+  width: 400px;
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  flex-shrink: 0;
+  transition: transform 0.25s ease 0.2s, opacity 0.5s ease 0.2s;
+}
 
-// .dialItem img {
-//   width: 100%;
-//   height: 100%;
-//   object-fit: contain;
-// }
+.dialItem img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
 
 .carouselButton {
   background: #e8e8ed;
@@ -98,65 +96,57 @@
   top: 30%;
 }
 
-
-/* Full-width container */
-/* Scrollable watch container */
 .watchContainer {
   width: 100%;
   display: flex;
   box-sizing: border-box;
-  gap: 60px; /* Space between watches */
-  overflow-x: auto; /* Enable horizontal scrolling */
-  scroll-behavior: smooth; /* Smooth scrolling */
-  padding: 20px 0; /* Padding for better visuals */
-  justify-content: start; /* Align watches at the start by default */
-  align-items: center; /* Center watches vertically */
+  gap: 60px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 20px 0;
+  justify-content: start;
+  align-items: center;
   position: relative;
   scroll-snap-type: x mandatory;
 }
 
- .watchContainer::-webkit-scrollbar {
-    display: none;
-  }
+.watchContainer::-webkit-scrollbar {
+  display: none;
+}
 
-/* Watch items */
 .watchItem {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 200px; /* Ensure consistent container width */
+  width: 200px;
   height: 300px;
   scroll-snap-align: center;
 }
 
 .watchItem.big {
-  transform: scale(1.2); /* Bigger size for the first watch */
+  transform: scale(1.2);
   padding-right: 200px;
-
 }
 
 .watchItem.small {
-  // transform: scale(0.8); /* Smaller size for the other watches */
   padding-left: 200px;
 }
 
-/* Band image (background) */
-.bandImage {
+.bandImages {
   position: absolute;
   width: 300px;
   cursor: pointer;
 }
 
-.bandImage img {
+.bandImages img {
   width: 100%;
   height: auto;
 }
 
-/* Dial image (foreground) */
 .dialImage {
   position: absolute;
-  z-index: 1; /* Ensure it overlays the band */
+  z-index: 1;
   width: 300px;
   cursor: pointer;
 }
@@ -166,7 +156,6 @@
   height: auto;
 }
 
-/* Scroll controls */
 .controls {
   display: flex;
   justify-content: center;

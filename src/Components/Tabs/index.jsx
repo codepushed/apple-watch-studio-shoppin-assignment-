@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { getBandsType } from "@/helpers";
 import { watchBands } from "@/Static";
 
-const Tabs = ({ handleCases, toggleSize, setToggleSize, isFading }) => {
+const Tabs = ({ handleCases, toggleSize, setToggleSize, isFading, setTab }) => {
   const [isExpanded, setIsExpanded] = useState(false);
   const [isActive, setIsActive] = useState(false);
   const [listBands, setListBands] = useState(false);
@@ -23,11 +23,13 @@ const Tabs = ({ handleCases, toggleSize, setToggleSize, isFading }) => {
     setIsExpanded(true);
     setListBands(false);
     handleCases();
+    setTab(1);
   };
 
   const handleBandClicked = () => {
     setIsExpanded(false);
     setListBands(true);
+    setTab(2);
   };
 
   useEffect(() => {
@@ -36,6 +38,11 @@ const Tabs = ({ handleCases, toggleSize, setToggleSize, isFading }) => {
     }, 1000);
   }, []);
 
+  const handleSizeTab = () => {
+    setTab(0);
+    setToggleSize(true);
+  };
+
   return (
     <div className="tabsContainer">
       <div className="tabs">
@@ -43,7 +50,7 @@ const Tabs = ({ handleCases, toggleSize, setToggleSize, isFading }) => {
           className={`btnsWithIcons case-button ${
             toggleSize ? "expandedSize" : ""
           }`}
-          onClick={() => setToggleSize(true)}
+          onClick={() => handleSizeTab()}
         >
           <img src="/icons/watchSize.svg" alt="watch-size" />
           {toggleSize && !isFading ? (

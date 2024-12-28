@@ -16,6 +16,7 @@ const WatchStudioHero = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [toggleSize, setToggleSize] = useState(false);
   const [watchView, setWatchView] = useState(false);
+  const [tab, setTab] = useState(1);
 
   const handleButtonClick = () => {
     setIsLoading(true);
@@ -90,10 +91,17 @@ const WatchStudioHero = () => {
 
         {isTransitionComplete && !isFading && (
           <>
-            {isCarouselVisible && (
-              <SizeCarousel centeredDial={centeredDial} setCenteredDial={setCenteredDial} />
-              // <CarouselWithSnap setCenteredDial={setCenteredDial} />
-            )}
+            {isCarouselVisible &&
+              (tab === 0 ? (
+                <SizeCarousel
+                  centeredDial={centeredDial}
+                  setCenteredDial={setCenteredDial}
+                />
+              ) : tab === 1 ? (
+                <CarouselWithSnap setCenteredDial={setCenteredDial} />
+              ) : (
+                " "
+              ))}
 
             <div className="watchDetailsContainer">
               <p
@@ -119,6 +127,7 @@ const WatchStudioHero = () => {
               toggleSize={toggleSize}
               setToggleSize={setToggleSize}
               isFading={isFading}
+              setTab={setTab}
             />
           </>
         )}
