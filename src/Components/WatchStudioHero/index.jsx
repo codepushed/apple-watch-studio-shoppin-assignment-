@@ -5,6 +5,7 @@ import Tabs from "../Tabs";
 
 import { watches } from "../../Static";
 import AppBar from "../AppBar";
+import SizeCarousel from "../CarouselWithSnap/SizeCarousel";
 
 const WatchStudioHero = () => {
   const [isShrunk, setIsShrunk] = useState(false);
@@ -90,7 +91,8 @@ const WatchStudioHero = () => {
         {isTransitionComplete && !isFading && (
           <>
             {isCarouselVisible && (
-              <CarouselWithSnap setCenteredDial={setCenteredDial} />
+              <SizeCarousel centeredDial={centeredDial} setCenteredDial={setCenteredDial} />
+              // <CarouselWithSnap setCenteredDial={setCenteredDial} />
             )}
 
             <div className="watchDetailsContainer">

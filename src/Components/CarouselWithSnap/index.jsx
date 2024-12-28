@@ -64,6 +64,7 @@ const CarouselWithSnap = ({ setCenteredDial }) => {
   // }, []);
   
 
+
   const scrollToDirection = (direction) => {
     if (carouselRef.current) {
       const carousel = carouselRef.current;
