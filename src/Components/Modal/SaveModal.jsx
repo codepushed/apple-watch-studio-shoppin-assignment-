@@ -22,6 +22,25 @@ const SaveModal = ({ isSaveModalOpen, handleSaveModalClose }) => {
     }, 1000);
   }, [isCopied]);
 
+  const shareOnX = () => {
+    const textToShare = "Check this out! Apple Watch Studio by @oyemehraxyz";
+    const urlToShare = "https://example.com";
+    const tweetUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(
+      textToShare
+    )}&url=${encodeURIComponent(urlToShare)}`;
+    window.open(tweetUrl, "_blank");
+  };
+
+  const shareOnLinkedIn = () => {
+    const textToShare =
+      "Check this out! Apple Watch Studio by https://www.linkedin.com/in/shubhammehracs/";
+    const urlToShare = "https://example.com";
+    const linkedInUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(
+      urlToShare
+    )}&text=${encodeURIComponent(textToShare)}`;
+    window.open(linkedInUrl, "_blank");
+  };
+
   return (
     <div>
       <Modals
@@ -44,19 +63,11 @@ const SaveModal = ({ isSaveModalOpen, handleSaveModalClose }) => {
             <Divider />
 
             <div className="shareIconsContainer">
-              <div className="shareIcons">
+              <div className="shareIcons" onClick={() => shareOnX()}>
                 <img src="/icons/icons8-x-100.png" alt="x" />
               </div>
 
-              <div className="shareIcons">
-                <img src="/icons/icons8-threads-96.png" alt="threads" />
-              </div>
-
-              <div className="shareIcons">
-                <img src="/icons/icons8-instagram-100.png" alt="instagram" />
-              </div>
-
-              <div className="shareIcons">
+              <div className="shareIcons" onClick={() => shareOnLinkedIn()}>
                 <img src="/icons/icons8-linkedin-100.png" alt="linkedin" />
               </div>
             </div>
