@@ -105,9 +105,9 @@ const WatchStudioHero = () => {
                 ""
               ))}
 
-              
-
-              {tab ===2 && <BandCarousel setBand={setBand} centeredDial={centeredDial} />}
+            {tab === 2 && (
+              <BandCarousel setBand={setBand} centeredDial={centeredDial} band={band} />
+            )}
 
             <div className="watchDetailsContainer">
               <p

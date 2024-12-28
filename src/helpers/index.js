@@ -9,3 +9,13 @@ export const getBandsType = (items) => {
  export const getBandsByType = (items, type) => {
     return items.filter(item => item.type === type);
   };
+
+  export const getLimitedEditions = (editions, centeredDial) =>  {
+    console.log("wok")
+    for (const band of editions) {
+        if (band.name === centeredDial.name && band.bodyType === centeredDial.bodyType) {
+            return band.img;
+        }
+    }
+    return null;
+}

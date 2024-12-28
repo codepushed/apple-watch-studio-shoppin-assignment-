@@ -128,14 +128,40 @@ export const watchBands = [
   {
     name: "Pride Edition Sport Loop",
     type: "Sport Loop",
-    img: [
-      "/assets/bands/Pride Edition Sport Loop.jpg",
-      // "watch-case-46-aluminum-rosegold-nc-s10_VW_PF+watch-face-46-pride-sport-loop-s10_VW_PF.png",
-      // "watch-case-46-aluminum-jetblack-nc-s10_VW_PF+watch-face-46-pride-sport-loop-s10_VW_PF.png",
-      // "watch-case-46-titanium-natural-cell-s10_VW_PF+watch-face-46-pride-sport-loop-s10_VW_PF.png",
-      // "watch-case-46-titanium-gold-cell-s10_VW_PF+watch-face-46-pride-sport-loop-s10_VW_PF.png",
-      // "watch-case-46-titanium-slate-cell-s10_VW_PF+watch-face-46-pride-sport-loop-s10_VW_PF.png",
+    img: ["/assets/bands/Pride Edition Sport Loop.jpg"],
+    editions: [
+      {
+        name: "Silver Aluminum",
+        bodyType: "Aluminum",
+        img: "/assets/series10/Pride Edition Sport Loop/46mm Silver Aluminum Case.png",
+      },
+      {
+        name: "Rose Gold Aluminum",
+        bodyType: "Aluminum",
+        img: "/assets/series10/Pride Edition Sport Loop/46mm Rose Gold Aluminum Case.png",
+      },
+      {
+        name: "Jet Black Aluminum",
+        bodyType: "Aluminum",
+        img: "/assets/series10/Pride Edition Sport Loop/46mm Jet Black Aluminum Case.png",
+      },
+      {
+        name: "Natural Titanium",
+        bodyType: "Titanium",
+        img: "/assets/series10/Pride Edition Sport Loop/46mm Natural Titanium Case.png",
+      },
+      {
+        name: "Gold Titanium",
+        bodyType: "Titanium",
+        img: "/assets/series10/Pride Edition Sport Loop/46mm Gold Titanium Case.png",
+      },
+      {
+        name: "Slate Titanium",
+        bodyType: "Titanium",
+        img: "/assets/series10/Pride Edition Sport Loop/46mm Slate Titanium Case.png",
+      },
     ],
+
     price: 749,
   },
   {
