@@ -2,15 +2,12 @@ import React, { useEffect, useState } from "react";
 import Box from "@mui/material/Box";
 import Divider from "@mui/material/Divider";
 import Modals from "@mui/material/Modal";
-import { useDispatch } from "react-redux";
 
 import { saveModalstyle } from "../../helpers/basic";
 import { CopyToClipboard } from "../../helpers";
-import { saveBand } from "@/store/slices/studio";
 
 const SaveModal = ({ isSaveModalOpen, handleSaveModalClose }) => {
   const [isCopied, setIsCopied] = useState(false);
-  const dispatch = useDispatch();
 
   const handleCopyToClipboard = () => {
     const copy = CopyToClipboard();
@@ -26,13 +23,12 @@ const SaveModal = ({ isSaveModalOpen, handleSaveModalClose }) => {
   }, [isCopied]);
 
   const shareOnX = () => {
-    dispatch(saveBand("ho"));
-    // const textToShare = "Check this out! Apple Watch Studio by @oyemehraxyz";
-    // const urlToShare = "https://example.com";
-    // const tweetUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(
-    //   textToShare
-    // )}&url=${encodeURIComponent(urlToShare)}`;
-    // window.open(tweetUrl, "_blank");
+    const textToShare = "Check this out! Apple Watch Studio by @oyemehraxyz";
+    const urlToShare = "https://example.com";
+    const tweetUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(
+      textToShare
+    )}&url=${encodeURIComponent(urlToShare)}`;
+    window.open(tweetUrl, "_blank");
   };
 
   const shareOnLinkedIn = () => {
