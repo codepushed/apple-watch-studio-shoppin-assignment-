@@ -208,6 +208,7 @@ const CarouselWithSnap = ({ setCenteredDial }) => {
       });
     }
   }, []);
+  
 
   return (
     <div className="carouselContainer">

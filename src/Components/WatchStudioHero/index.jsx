@@ -2,11 +2,12 @@ import React, { useState } from "react";
 
 import CarouselWithSnap from "../CarouselWithSnap";
 import Tabs from "../Tabs";
-
-import { watchBands, watches } from "../../Static";
 import AppBar from "../AppBar";
 import SizeCarousel from "../CarouselWithSnap/SizeCarousel";
 import BandCarousel from "../CarouselWithSnap/BandCarousel";
+
+import { watchBands, watches } from "../../Static";
+
 
 const WatchStudioHero = () => {
   const [isShrunk, setIsShrunk] = useState(false);
@@ -73,21 +74,28 @@ const WatchStudioHero = () => {
             className={`watchStudioHeroImg ${isShrunk ? "shrink" : ""}`}
             onTransitionEnd={handleTransitionEnd}
           >
-            <div className="watchStudioDial">
-              <img
-                src={band?.img}
-                alt="watch-dial"
-                className={isFading ? "fadeEffect" : ""}
-              />
-            </div>
-
-            <div className="watchStudioCase">
-              <img
-                src={centeredDial?.img}
-                alt="watch-case"
-                className={isFading ? "fadeEffect" : ""}
-              />
-            </div>
+            {watchView ? (
+              <div className="watchStudioDial">
+                <img src={band?.sideView} />
+              </div>
+            ) : (
+              <>
+                <div className="watchStudioDial">
+                  <img
+                    src={band?.img}
+                    alt="watch-dial"
+                    className={isFading ? "fadeEffect" : ""}
+                  />
+                </div>
+                <div className="watchStudioCase">
+                  <img
+                    src={centeredDial?.img}
+                    alt="watch-case"
+                    className={isFading ? "fadeEffect" : ""}
+                  />
+                </div>
+              </>
+            )}
           </div>
         )}
 
@@ -106,7 +114,11 @@ const WatchStudioHero = () => {
               ))}
 
             {tab === 2 && (
-              <BandCarousel setBand={setBand} centeredDial={centeredDial} band={band} />
+              <BandCarousel
+                setBand={setBand}
+                centeredDial={centeredDial}
+                band={band}
+              />
             )}
 
             <div className="watchDetailsContainer">

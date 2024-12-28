@@ -1,7 +1,7 @@
 import React, { useRef, useEffect, useState } from "react";
 
-import { watchBands } from "../../Static";
-import { getLimitedEditions } from "@/helpers";
+import { sideView, watchBands } from "../../Static";
+import { getLimitedEditions, getMatchingSideViews } from "@/helpers";
 
 const BandCarousel = ({ setBand, centeredDial, band }) => {
   const carouselRef = useRef(null);
@@ -17,6 +17,8 @@ const BandCarousel = ({ setBand, centeredDial, band }) => {
       );
     }
   };
+
+  // console.log(getMatchingSideViews(centeredDial, watchBands?.editions, sideView));
 
   // const applyMagneticPull = () => {
   //   if (carouselRef.current) {
@@ -202,6 +204,7 @@ const BandCarousel = ({ setBand, centeredDial, band }) => {
       });
     }
   }, []);
+
 
   return (
     <div className="carouselContainer">

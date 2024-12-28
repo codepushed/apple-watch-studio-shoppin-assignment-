@@ -5,17 +5,7 @@ import Typography from "@mui/material/Typography";
 import Modals from "@mui/material/Modal";
 
 import { collections } from "../../Static";
-
-const style = {
-  position: "absolute",
-  top: "17%",
-  left: "50%",
-  transform: "translate(-50%, -50%)",
-  width: 280,
-  bgcolor: "background.paper",
-  padding: "0px 26px",
-  borderRadius: "25px",
-};
+import { collectionModalStyle } from "@/helpers/basic";
 
 const Modal = ({ open, handleClose }) => {
   const [isActive, setIsActive] = useState(0);
@@ -32,7 +22,7 @@ const Modal = ({ open, handleClose }) => {
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
-        <Box sx={style}>
+        <Box sx={collectionModalStyle}>
           {collections?.map((item, index) => (
             <div key={index}>
               <Typography

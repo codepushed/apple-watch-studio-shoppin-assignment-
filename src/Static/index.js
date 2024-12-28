@@ -244,6 +244,7 @@ export const watchBands = [
     type: "Sport Band",
     img: "/assets/bands/Light Blush Sport Band.jpg",
     price: 749,
+    // put the desired band + dial sideview here
   },
   {
     name: "Pride Edition Sport Band",
@@ -293,6 +294,7 @@ export const watchBands = [
         name: "Silver Aluminum",
         bodyType: "Aluminum",
         img: "/assets/series10/Black Unity Sport Band - Unity Bloom/46mm Silver Aluminum Case.png",
+        // put the desired styled watch sideview here
       },
       {
         name: "Rose Gold Aluminum",
@@ -500,6 +502,8 @@ export const watchBands = [
     type: "Solo Loop",
     img: "/assets/bands/Black Solo Loop.jpg",
     price: 749,
+    sideView:
+      "/assets/sideview/MYA33ref_FV99_VW_34FR+watch-case-46-aluminum-jetblack-nc-s10_VW_34FR+watch-face-46-aluminum-jetblack-s10_VW_34FR (1).jpeg",
   },
   {
     name: "Light Blush Solo Loop",
@@ -978,4 +982,18 @@ export const collections = [
   "Apple Watch Series 10",
   "Apple Watch Hermès Series 10",
   "Apple Watch SE",
+];
+
+// sideview
+// name: "Jet Black Aluminum",
+// bodyType: "Aluminum",
+
+// matches
+
+export const sideView = [
+  {
+    name: "Jet Black Aluminum",
+    bodyType: "Aluminum",
+    img: "/assets/sideview/MYA33ref_FV99_VW_34FR+watch-case-46-aluminum-jetblack-nc-s10_VW_34FR+watch-face-46-aluminum-jetblack-s10_VW_34FR (1).jpeg",
+  },
 ];

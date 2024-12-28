@@ -18,3 +18,31 @@
 .collectionActive {
     color: #86868b;
 }
+
+.shareIconsContainer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.shareIcons {
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+}
+
+.shareIcons > img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+.copyToClipboardContainer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
