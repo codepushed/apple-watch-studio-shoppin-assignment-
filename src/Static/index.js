@@ -170,6 +170,38 @@ export const watchBands = [
     img: "/assets/bands/Black Unity Sport Loop.jpg", //this will contain unique dial editions
     isDialLimitedEdition: true,
     price: 749,
+    editions: [
+      {
+        name: "Silver Aluminum",
+        bodyType: "Aluminum",
+        img: "/assets/series10/Black Unity Sport Loop/46mm Silver Aluminum Case.png",
+      },
+      {
+        name: "Rose Gold Aluminum",
+        bodyType: "Aluminum",
+        img: "/assets/series10/Black Unity Sport Loop/46mm Rose Gold Aluminum Case.png",
+      },
+      {
+        name: "Jet Black Aluminum",
+        bodyType: "Aluminum",
+        img: "/assets/series10/Black Unity Sport Loop/46mm Jet Black Aluminum Case.png",
+      },
+      {
+        name: "Natural Titanium",
+        bodyType: "Titanium",
+        img: "/assets/series10/Black Unity Sport Loop/46mm Natural Titanium Case.png",
+      },
+      {
+        name: "Gold Titanium",
+        bodyType: "Titanium",
+        img: "/assets/series10/Black Unity Sport Loop/46mm Gold Titanium Case.png",
+      },
+      {
+        name: "Slate Titanium",
+        bodyType: "Titanium",
+        img: "/assets/series10/Black Unity Sport Loop/46mm Slate Titanium Case.png",
+      },
+    ],
   },
   {
     name: "Lake Green Sport Band",
@@ -218,18 +250,114 @@ export const watchBands = [
     type: "Sport Band",
     img: "/assets/bands/Pride Edition Sport Band.jpg",
     price: 749,
+    editions: [
+      {
+        name: "Silver Aluminum",
+        bodyType: "Aluminum",
+        img: "/assets/series10/Pride Edition Sport Band/46mm Silver Aluminum Case.png",
+      },
+      {
+        name: "Rose Gold Aluminum",
+        bodyType: "Aluminum",
+        img: "/assets/series10/Pride Edition Sport Band/46mm Rose Gold Aluminum Case.png",
+      },
+      {
+        name: "Jet Black Aluminum",
+        bodyType: "Aluminum",
+        img: "/assets/series10/Pride Edition Sport Band/46mm Jet Black Aluminum Case.png",
+      },
+      {
+        name: "Natural Titanium",
+        bodyType: "Titanium",
+        img: "/assets/series10/Pride Edition Sport Band/46mm Natural Titanium Case.png",
+      },
+      {
+        name: "Gold Titanium",
+        bodyType: "Titanium",
+        img: "/assets/series10/Pride Edition Sport Band/46mm Gold Titanium Case.png",
+      },
+      {
+        name: "Slate Titanium",
+        bodyType: "Titanium",
+        img: "/assets/series10/Pride Edition Sport Band/46mm Slate Titanium Case.png",
+      },
+    ],
   },
   {
     name: "Black Unity Sport Band - Unity Bloom",
     type: "Sport Band",
     img: "/assets/bands/Black Unity Sport Band - Unity Bloom.jpg",
     price: 749,
+    editions: [
+      {
+        name: "Silver Aluminum",
+        bodyType: "Aluminum",
+        img: "/assets/series10/Black Unity Sport Band - Unity Bloom/46mm Silver Aluminum Case.png",
+      },
+      {
+        name: "Rose Gold Aluminum",
+        bodyType: "Aluminum",
+        img: "/assets/series10/Black Unity Sport Band - Unity Bloom/46mm Rose Gold Aluminum Case.png",
+      },
+      {
+        name: "Jet Black Aluminum",
+        bodyType: "Aluminum",
+        img: "/assets/series10/Black Unity Sport Band - Unity Bloom/46mm Jet Black Aluminum Case.png",
+      },
+      {
+        name: "Natural Titanium",
+        bodyType: "Titanium",
+        img: "/assets/series10/Black Unity Sport Band - Unity Bloom/46mm Natural Titanium Case.png",
+      },
+      {
+        name: "Gold Titanium",
+        bodyType: "Titanium",
+        img: "/assets/series10/Black Unity Sport Band - Unity Bloom/46mm Gold Titanium Case.png",
+      },
+      {
+        name: "Slate Titanium",
+        bodyType: "Titanium",
+        img: "/assets/series10/Black Unity Sport Band - Unity Bloom/46mm Slate Titanium Case.png",
+      },
+    ],
   },
   {
     name: "Black Unity Sport Band",
     type: "Sport Band",
     img: "/assets/bands/Black Unity Sport Band.jpg",
     price: 749,
+    editions: [
+      {
+        name: "Silver Aluminum",
+        bodyType: "Aluminum",
+        img: "/assets/series10/Black Unity Sport Band/46mm Silver Aluminum Case.png",
+      },
+      {
+        name: "Rose Gold Aluminum",
+        bodyType: "Aluminum",
+        img: "/assets/series10/Black Unity Sport Band/46mm Rose Gold Aluminum Case.png",
+      },
+      {
+        name: "Jet Black Aluminum",
+        bodyType: "Aluminum",
+        img: "/assets/series10/Black Unity Sport Band/46mm Jet Black Aluminum Case.png",
+      },
+      {
+        name: "Natural Titanium",
+        bodyType: "Titanium",
+        img: "/assets/series10/Black Unity Sport Band/46mm Natural Titanium Case.png",
+      },
+      {
+        name: "Gold Titanium",
+        bodyType: "Titanium",
+        img: "/assets/series10/Black Unity Sport Band/46mm Gold Titanium Case.png",
+      },
+      {
+        name: "Slate Titanium",
+        bodyType: "Titanium",
+        img: "/assets/series10/Black Unity Sport Band/46mm Slate Titanium Case.png",
+      },
+    ],
   },
   {
     name: "Black Magnetic Link",
@@ -278,12 +406,76 @@ export const watchBands = [
     type: "Braided Solo Loop",
     img: "/assets/bands/Pride Edition Braided Solo Loop.jpg",
     price: 799,
+    editions: [
+      {
+        name: "Silver Aluminum",
+        bodyType: "Aluminum",
+        img: "/assets/series10/Pride Edition Braided Solo Loop/46mm Silver Aluminum Case.png",
+      },
+      {
+        name: "Rose Gold Aluminum",
+        bodyType: "Aluminum",
+        img: "/assets/series10/Pride Edition Braided Solo Loop/46mm Rose Gold Aluminum Case.png",
+      },
+      {
+        name: "Jet Black Aluminum",
+        bodyType: "Aluminum",
+        img: "/assets/series10/Pride Edition Braided Solo Loop/46mm Jet Black Aluminum Case.png",
+      },
+      {
+        name: "Natural Titanium",
+        bodyType: "Titanium",
+        img: "/assets/series10/Pride Edition Braided Solo Loop/46mm Natural Titanium Case.png",
+      },
+      {
+        name: "Gold Titanium",
+        bodyType: "Titanium",
+        img: "/assets/series10/Pride Edition Braided Solo Loop/46mm Gold Titanium Case.png",
+      },
+      {
+        name: "Slate Titanium",
+        bodyType: "Titanium",
+        img: "/assets/series10/Pride Edition Braided Solo Loop/46mm Slate Titanium Case.png",
+      },
+    ],
   },
   {
     name: "Black Unity Braided Solo Loop",
     type: "Braided Solo Loop",
     img: "/assets/bands/Black Unity Braided Solo Loop.jpg",
     price: 799,
+    editions: [
+      {
+        name: "Silver Aluminum",
+        bodyType: "Aluminum",
+        img: "/assets/series10/Black Unity Braided Solo Loop/46mm Silver Aluminum Case.png",
+      },
+      {
+        name: "Rose Gold Aluminum",
+        bodyType: "Aluminum",
+        img: "/assets/series10/Black Unity Braided Solo Loop/46mm Rose Gold Aluminum Case.png",
+      },
+      {
+        name: "Jet Black Aluminum",
+        bodyType: "Aluminum",
+        img: "/assets/series10/Black Unity Braided Solo Loop/46mm Jet Black Aluminum Case.png",
+      },
+      {
+        name: "Natural Titanium",
+        bodyType: "Titanium",
+        img: "/assets/series10/Black Unity Braided Solo Loop/46mm Natural Titanium Case.png",
+      },
+      {
+        name: "Gold Titanium",
+        bodyType: "Titanium",
+        img: "/assets/series10/Black Unity Braided Solo Loop/46mm Gold Titanium Case.png",
+      },
+      {
+        name: "Slate Titanium",
+        bodyType: "Titanium",
+        img: "/assets/series10/Black Unity Braided Solo Loop/46mm Slate Titanium Case.png",
+      },
+    ],
   },
   {
     name: "Star Fruit Solo Loop",
@@ -320,66 +512,418 @@ export const watchBands = [
     type: "Nike Sport Loop",
     img: "/assets/bands/Black Blue Nike Sport Loop.jpg",
     price: 749,
+    editions: [
+      {
+        name: "Silver Aluminum",
+        bodyType: "Aluminum",
+        img: "/assets/series10/BlackBlue Nike Sport Loop/46mm Silver Aluminum Case.png",
+      },
+      {
+        name: "Rose Gold Aluminum",
+        bodyType: "Aluminum",
+        img: "/assets/series10/BlackBlue Nike Sport Loop/46mm Rose Gold Aluminum Case.png",
+      },
+      {
+        name: "Jet Black Aluminum",
+        bodyType: "Aluminum",
+        img: "/assets/series10/BlackBlue Nike Sport Loop/46mm Jet Black Aluminum Case.png",
+      },
+      {
+        name: "Natural Titanium",
+        bodyType: "Titanium",
+        img: "/assets/series10/BlackBlue Nike Sport Loop/46mm Natural Titanium Case.png",
+      },
+      {
+        name: "Gold Titanium",
+        bodyType: "Titanium",
+        img: "/assets/series10/BlackBlue Nike Sport Loop/46mm Gold Titanium Case.png",
+      },
+      {
+        name: "Slate Titanium",
+        bodyType: "Titanium",
+        img: "/assets/series10/BlackBlue Nike Sport Loop/46mm Slate Titanium Case.png",
+      },
+    ],
   },
   {
     name: "Starlight/Pink Nike Sport Loop",
     type: "Nike Sport Loop",
     img: "/assets/bands/Starlight Pink Nike Sport Loop.jpg",
     price: 749,
+    editions: [
+      {
+        name: "Silver Aluminum",
+        bodyType: "Aluminum",
+        img: "/assets/series10/StarlightPink Nike Sport Loop/46mm Silver Aluminum Case.png",
+      },
+      {
+        name: "Rose Gold Aluminum",
+        bodyType: "Aluminum",
+        img: "/assets/series10/StarlightPink Nike Sport Loop/46mm Rose Gold Aluminum Case.png",
+      },
+      {
+        name: "Jet Black Aluminum",
+        bodyType: "Aluminum",
+        img: "/assets/series10/StarlightPink Nike Sport Loop/46mm Jet Black Aluminum Case.png",
+      },
+      {
+        name: "Natural Titanium",
+        bodyType: "Titanium",
+        img: "/assets/series10/StarlightPink Nike Sport Loop/46mm Natural Titanium Case.png",
+      },
+      {
+        name: "Gold Titanium",
+        bodyType: "Titanium",
+        img: "/assets/series10/StarlightPink Nike Sport Loop/46mm Gold Titanium Case.png",
+      },
+      {
+        name: "Slate Titanium",
+        bodyType: "Titanium",
+        img: "/assets/series10/StarlightPink Nike Sport Loop/46mm Slate Titanium Case.png",
+      },
+    ],
   },
   {
     name: "Grey/Blue Nike Sport Loop",
     type: "Nike Sport Loop",
-    img: "/assets/bands/Green Grey Nike Sport Loop.jpg",
+    img: "/assets/bands/Grey Blue Nike Sport Loop.jpg",
     price: 749,
+    editions: [
+      {
+        name: "Silver Aluminum",
+        bodyType: "Aluminum",
+        img: "/assets/series10/GreyBlue Nike Sport Loop/46mm Silver Aluminum Case.png",
+      },
+      {
+        name: "Rose Gold Aluminum",
+        bodyType: "Aluminum",
+        img: "/assets/series10/GreyBlue Nike Sport Loop/46mm Rose Gold Aluminum Case.png",
+      },
+      {
+        name: "Jet Black Aluminum",
+        bodyType: "Aluminum",
+        img: "/assets/series10/GreyBlue Nike Sport Loop/46mm Jet Black Aluminum Case.png",
+      },
+      {
+        name: "Natural Titanium",
+        bodyType: "Titanium",
+        img: "/assets/series10/GreyBlue Nike Sport Loop/46mm Natural Titanium Case.png",
+      },
+      {
+        name: "Gold Titanium",
+        bodyType: "Titanium",
+        img: "/assets/series10/GreyBlue Nike Sport Loop/46mm Gold Titanium Case.png",
+      },
+      {
+        name: "Slate Titanium",
+        bodyType: "Titanium",
+        img: "/assets/series10/GreyBlue Nike Sport Loop/46mm Slate Titanium Case.png",
+      },
+    ],
   },
   {
     name: "Green/Grey Nike Sport Loop",
     type: "Nike Sport Loop",
-    img: "/assets/bands/Grey Blue Nike Sport Loop.jpg",
+    img: "/assets/bands/Green Grey Nike Sport Loop.jpg",
     price: 749,
+    editions: [
+      {
+        name: "Silver Aluminum",
+        bodyType: "Aluminum",
+        img: "/assets/series10/GreenGrey Nike Sport Loop/46mm Silver Aluminum Case.png",
+      },
+      {
+        name: "Rose Gold Aluminum",
+        bodyType: "Aluminum",
+        img: "/assets/series10/GreenGrey Nike Sport Loop/46mm Rose Gold Aluminum Case.png",
+      },
+      {
+        name: "Jet Black Aluminum",
+        bodyType: "Aluminum",
+        img: "/assets/series10/GreenGrey Nike Sport Loop/46mm Jet Black Aluminum Case.png",
+      },
+      {
+        name: "Natural Titanium",
+        bodyType: "Titanium",
+        img: "/assets/series10/GreenGrey Nike Sport Loop/46mm Natural Titanium Case.png",
+      },
+      {
+        name: "Gold Titanium",
+        bodyType: "Titanium",
+        img: "/assets/series10/GreenGrey Nike Sport Loop/46mm Gold Titanium Case.png",
+      },
+      {
+        name: "Slate Titanium",
+        bodyType: "Titanium",
+        img: "/assets/series10/GreenGrey Nike Sport Loop/46mm Slate Titanium Case.png",
+      },
+    ],
   },
   {
     name: "Blue/Red Nike Sport Loop",
     type: "Nike Sport Loop",
     img: "/assets/bands/Blue Red Nike Sport Loop.jpg",
     price: 749,
+    editions: [
+      {
+        name: "Silver Aluminum",
+        bodyType: "Aluminum",
+        img: "/assets/series10/BlueRed Nike Sport Loop/46mm Silver Aluminum Case.png",
+      },
+      {
+        name: "Rose Gold Aluminum",
+        bodyType: "Aluminum",
+        img: "/assets/series10/BlueRed Nike Sport Loop/46mm Rose Gold Aluminum Case.png",
+      },
+      {
+        name: "Jet Black Aluminum",
+        bodyType: "Aluminum",
+        img: "/assets/series10/BlueRed Nike Sport Loop/46mm Jet Black Aluminum Case.png",
+      },
+      {
+        name: "Natural Titanium",
+        bodyType: "Titanium",
+        img: "/assets/series10/BlueRed Nike Sport Loop/46mm Natural Titanium Case.png",
+      },
+      {
+        name: "Gold Titanium",
+        bodyType: "Titanium",
+        img: "/assets/series10/BlueRed Nike Sport Loop/46mm Gold Titanium Case.png",
+      },
+      {
+        name: "Slate Titanium",
+        bodyType: "Titanium",
+        img: "/assets/series10/BlueRed Nike Sport Loop/46mm Slate Titanium Case.png",
+      },
+    ],
   },
   {
     name: "Volt Splash Nike Sport Band",
     type: "Nike Sport Band",
     img: "/assets/bands/Volt Splash Nike Sport Band.jpg",
     price: 749,
+    editions: [
+      {
+        name: "Silver Aluminum",
+        bodyType: "Aluminum",
+        img: "/assets/series10/Volt Splash Nike Sport Band/46mm Silver Aluminum Case.png",
+      },
+      {
+        name: "Rose Gold Aluminum",
+        bodyType: "Aluminum",
+        img: "/assets/series10/Volt Splash Nike Sport Band/46mm Rose Gold Aluminum Case.png",
+      },
+      {
+        name: "Jet Black Aluminum",
+        bodyType: "Aluminum",
+        img: "/assets/series10/Volt Splash Nike Sport Band/46mm Jet Black Aluminum Case.png",
+      },
+      {
+        name: "Natural Titanium",
+        bodyType: "Titanium",
+        img: "/assets/series10/Volt Splash Nike Sport Band/46mm Natural Titanium Case.png",
+      },
+      {
+        name: "Gold Titanium",
+        bodyType: "Titanium",
+        img: "/assets/series10/Volt Splash Nike Sport Band/46mm Gold Titanium Case.png",
+      },
+      {
+        name: "Slate Titanium",
+        bodyType: "Titanium",
+        img: "/assets/series10/Volt Splash Nike Sport Band/46mm Slate Titanium Case.png",
+      },
+    ],
   },
   {
     name: "Magic Ember Nike Sport Band",
     type: "Nike Sport Band",
     img: "/assets/bands/Magic Ember Nike Sport Band.jpg",
     price: 749,
+    editions: [
+      {
+        name: "Silver Aluminum",
+        bodyType: "Aluminum",
+        img: "/assets/series10/Magic Ember Nike Sport Band/46mm Silver Aluminum Case.png",
+      },
+      {
+        name: "Rose Gold Aluminum",
+        bodyType: "Aluminum",
+        img: "/assets/series10/Magic Ember Nike Sport Band/46mm Rose Gold Aluminum Case.png",
+      },
+      {
+        name: "Jet Black Aluminum",
+        bodyType: "Aluminum",
+        img: "/assets/series10/Magic Ember Nike Sport Band/46mm Jet Black Aluminum Case.png",
+      },
+      {
+        name: "Natural Titanium",
+        bodyType: "Titanium",
+        img: "/assets/series10/Magic Ember Nike Sport Band/46mm Natural Titanium Case.png",
+      },
+      {
+        name: "Gold Titanium",
+        bodyType: "Titanium",
+        img: "/assets/series10/Magic Ember Nike Sport Band/46mm Gold Titanium Case.png",
+      },
+      {
+        name: "Slate Titanium",
+        bodyType: "Titanium",
+        img: "/assets/series10/Magic Ember Nike Sport Band/46mm Slate Titanium Case.png",
+      },
+    ],
   },
   {
     name: "Midnight Sky Nike Sport Band",
     type: "Nike Sport Band",
     img: "/assets/bands/Midnight Sky Nike Sport Band.jpg",
     price: 749,
+    editions: [
+      {
+        name: "Silver Aluminum",
+        bodyType: "Aluminum",
+        img: "/assets/series10/Midnight Sky Nike Sport Band/46mm Silver Aluminum Case.png",
+      },
+      {
+        name: "Rose Gold Aluminum",
+        bodyType: "Aluminum",
+        img: "/assets/series10/Midnight Sky Nike Sport Band/46mm Rose Gold Aluminum Case.png",
+      },
+      {
+        name: "Jet Black Aluminum",
+        bodyType: "Aluminum",
+        img: "/assets/series10/Midnight Sky Nike Sport Band/46mm Jet Black Aluminum Case.png",
+      },
+      {
+        name: "Natural Titanium",
+        bodyType: "Titanium",
+        img: "/assets/series10/Midnight Sky Nike Sport Band/46mm Natural Titanium Case.png",
+      },
+      {
+        name: "Gold Titanium",
+        bodyType: "Titanium",
+        img: "/assets/series10/Midnight Sky Nike Sport Band/46mm Gold Titanium Case.png",
+      },
+      {
+        name: "Slate Titanium",
+        bodyType: "Titanium",
+        img: "/assets/series10/Midnight Sky Nike Sport Band/46mm Slate Titanium Case.png",
+      },
+    ],
   },
   {
     name: "Pure Platinum Nike Sport Band",
     type: "Nike Sport Band",
     img: "/assets/bands/Pure Platinum Nike Sport Band.jpg",
     price: 749,
+    editions: [
+      {
+        name: "Silver Aluminum",
+        bodyType: "Aluminum",
+        img: "/assets/series10/Pure Platinum Nike Sport Band/46mm Silver Aluminum Case.png",
+      },
+      {
+        name: "Rose Gold Aluminum",
+        bodyType: "Aluminum",
+        img: "/assets/series10/Pure Platinum Nike Sport Band/46mm Rose Gold Aluminum Case.png",
+      },
+      {
+        name: "Jet Black Aluminum",
+        bodyType: "Aluminum",
+        img: "/assets/series10/Pure Platinum Nike Sport Band/46mm Jet Black Aluminum Case.png",
+      },
+      {
+        name: "Natural Titanium",
+        bodyType: "Titanium",
+        img: "/assets/series10/Pure Platinum Nike Sport Band/46mm Natural Titanium Case.png",
+      },
+      {
+        name: "Gold Titanium",
+        bodyType: "Titanium",
+        img: "/assets/series10/Pure Platinum Nike Sport Band/46mm Gold Titanium Case.png",
+      },
+      {
+        name: "Slate Titanium",
+        bodyType: "Titanium",
+        img: "/assets/series10/Pure Platinum Nike Sport Band/46mm Slate Titanium Case.png",
+      },
+    ],
   },
   {
     name: "Desert Stone Nike Sport Band",
     type: "Nike Sport Band",
     img: "/assets/bands/Desert Stone Nike Sport Band.jpg",
     price: 749,
+    editions: [
+      {
+        name: "Silver Aluminum",
+        bodyType: "Aluminum",
+        img: "/assets/series10/Desert Stone Nike Sport Band/46mm Silver Aluminum Case.png",
+      },
+      {
+        name: "Rose Gold Aluminum",
+        bodyType: "Aluminum",
+        img: "/assets/series10/Desert Stone Nike Sport Band/46mm Rose Gold Aluminum Case.png",
+      },
+      {
+        name: "Jet Black Aluminum",
+        bodyType: "Aluminum",
+        img: "/assets/series10/Desert Stone Nike Sport Band/46mm Jet Black Aluminum Case.png",
+      },
+      {
+        name: "Natural Titanium",
+        bodyType: "Titanium",
+        img: "/assets/series10/Desert Stone Nike Sport Band/46mm Natural Titanium Case.png",
+      },
+      {
+        name: "Gold Titanium",
+        bodyType: "Titanium",
+        img: "/assets/series10/Desert Stone Nike Sport Band/46mm Gold Titanium Case.png",
+      },
+      {
+        name: "Slate Titanium",
+        bodyType: "Titanium",
+        img: "/assets/series10/Desert Stone Nike Sport Band/46mm Slate Titanium Case.png",
+      },
+    ],
   },
   {
     name: "Cargo Khaki Nike Sport Band",
     type: "Nike Sport Band",
     img: "/assets/bands/Cargo Khaki Nike Sport Band.jpg",
     price: 749,
+    editions: [
+      {
+        name: "Silver Aluminum",
+        bodyType: "Aluminum",
+        img: "/assets/series10/Cargo Khaki Nike Sport Band/46mm Silver Aluminum Case.png",
+      },
+      {
+        name: "Rose Gold Aluminum",
+        bodyType: "Aluminum",
+        img: "/assets/series10/Cargo Khaki Nike Sport Band/46mm Rose Gold Aluminum Case.png",
+      },
+      {
+        name: "Jet Black Aluminum",
+        bodyType: "Aluminum",
+        img: "/assets/series10/Cargo Khaki Nike Sport Band/46mm Jet Black Aluminum Case.png",
+      },
+      {
+        name: "Natural Titanium",
+        bodyType: "Titanium",
+        img: "/assets/series10/Cargo Khaki Nike Sport Band/46mm Natural Titanium Case.png",
+      },
+      {
+        name: "Gold Titanium",
+        bodyType: "Titanium",
+        img: "/assets/series10/Cargo Khaki Nike Sport Band/46mm Gold Titanium Case.png",
+      },
+      {
+        name: "Slate Titanium",
+        bodyType: "Titanium",
+        img: "/assets/series10/Cargo Khaki Nike Sport Band/46mm Slate Titanium Case.png",
+      },
+    ],
   },
 
   {
@@ -387,6 +931,38 @@ export const watchBands = [
     type: "Nike Sport Band",
     img: "/assets/bands/Blue Flame Nike Sport Band.jpg",
     price: 749,
+    editions: [
+      {
+        name: "Silver Aluminum",
+        bodyType: "Aluminum",
+        img: "/assets/series10/Blue Flame Nike Sport Band/46mm Silver Aluminum Case.png",
+      },
+      {
+        name: "Rose Gold Aluminum",
+        bodyType: "Aluminum",
+        img: "/assets/series10/Blue Flame Nike Sport Band/46mm Rose Gold Aluminum Case.png",
+      },
+      {
+        name: "Jet Black Aluminum",
+        bodyType: "Aluminum",
+        img: "/assets/series10/Blue Flame Nike Sport Band/46mm Jet Black Aluminum Case.png",
+      },
+      {
+        name: "Natural Titanium",
+        bodyType: "Titanium",
+        img: "/assets/series10/Blue Flame Nike Sport Band/46mm Natural Titanium Case.png",
+      },
+      {
+        name: "Gold Titanium",
+        bodyType: "Titanium",
+        img: "/assets/series10/Blue Flame Nike Sport Band/46mm Gold Titanium Case.png",
+      },
+      {
+        name: "Slate Titanium",
+        bodyType: "Titanium",
+        img: "/assets/series10/Blue Flame Nike Sport Band/46mm Slate Titanium Case.png",
+      },
+    ],
   },
 ];
 
