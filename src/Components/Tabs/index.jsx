@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { getBandsType } from "@/helpers";
 import { watchBands } from "@/Static";
 
-const Tabs = ({ handleCases, toggleSize, setToggleSize, isFading, setTab }) => {
+const Tabs = ({ handleCases, toggleSize, setToggleSize, isFading, setTab, handleSizes }) => {
   const [isExpanded, setIsExpanded] = useState(false);
   const [isActive, setIsActive] = useState(false);
   const [listBands, setListBands] = useState(false);
@@ -22,7 +22,7 @@ const Tabs = ({ handleCases, toggleSize, setToggleSize, isFading, setTab }) => {
   const handleWatchCase = () => {
     setIsExpanded(true);
     setListBands(false);
-    handleCases();
+    // handleCases();
     setTab(1);
   };
 
@@ -30,6 +30,7 @@ const Tabs = ({ handleCases, toggleSize, setToggleSize, isFading, setTab }) => {
     setIsExpanded(false);
     setListBands(true);
     setTab(2);
+    // handleCases();
   };
 
   useEffect(() => {
@@ -41,6 +42,7 @@ const Tabs = ({ handleCases, toggleSize, setToggleSize, isFading, setTab }) => {
   const handleSizeTab = () => {
     setTab(0);
     setToggleSize(true);
+    handleCases();
   };
 
   return (

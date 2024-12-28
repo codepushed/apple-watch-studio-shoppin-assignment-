@@ -1,8 +1,8 @@
 import React, { useRef, useEffect, useState } from "react";
 
-import { watches } from "../../Static";
+import { watchBands } from "../../Static";
 
-const CarouselWithSnap = ({ setCenteredDial }) => {
+const BandCarousel = ({ setBand, centeredDial }) => {
   const carouselRef = useRef(null);
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(true);
@@ -70,7 +70,7 @@ const CarouselWithSnap = ({ setCenteredDial }) => {
       const carousel = carouselRef.current;
       const itemWidth = carousel.offsetWidth / 2;
       const scrollPosition = carousel.scrollLeft;
-      const totalItems = watches.length;
+      const totalItems = watchBands.length;
 
       let targetIndex =
         direction === "left"
@@ -87,7 +87,7 @@ const CarouselWithSnap = ({ setCenteredDial }) => {
         behavior: "smooth",
       });
 
-      setCenteredDial(watches[targetIndex]);
+      setBand(watchBands[targetIndex]);
     }
   };
 
@@ -103,12 +103,10 @@ const CarouselWithSnap = ({ setCenteredDial }) => {
         behavior: "smooth",
       });
 
-      setCenteredDial(watches[index]);
+      setCenteredDial(watchBands[index]);
     }
   };
 
-
-  
 
   const scrollToNearestWithBounce = () => {
     if (carouselRef.current) {
@@ -118,7 +116,7 @@ const CarouselWithSnap = ({ setCenteredDial }) => {
       const nearestIndex = Math.round(scrollPosition / itemWidth);
       const visibleWidth = carousel.offsetWidth;
       const maxScrollPosition =
-        (watches.length - 1) * itemWidth - (visibleWidth / 2 - itemWidth / 2);
+        (watchBands.length - 1) * itemWidth - (visibleWidth / 2 - itemWidth / 2);
 
       const targetScrollPosition = nearestIndex * itemWidth;
 
@@ -132,7 +130,7 @@ const CarouselWithSnap = ({ setCenteredDial }) => {
         behavior: "smooth",
       });
 
-      setCenteredDial(watches[nearestIndex]);
+      setBand(watchBands[nearestIndex]);
     }
   };
 
@@ -152,7 +150,7 @@ const CarouselWithSnap = ({ setCenteredDial }) => {
     const carousel = carouselRef.current;
     if (carousel) {
       const itemWidth = carousel.offsetWidth / 3;
-      const centerIndex = Math.floor(watches.length / 2);
+      const centerIndex = Math.floor(watchBands.length / 2);
       const targetScrollPosition = centerIndex * itemWidth;
 
       carousel.scrollTo({
@@ -160,7 +158,7 @@ const CarouselWithSnap = ({ setCenteredDial }) => {
         behavior: "smooth",
       });
 
-      setCenteredDial(watches[centerIndex]);
+      setBand(watchBands[centerIndex]);
     }
   }, []);
 
@@ -211,8 +209,8 @@ const CarouselWithSnap = ({ setCenteredDial }) => {
 
   return (
     <div className="carouselContainer">
-      <div className="bandImage">
-        <img src="/assets/watch-band.jpeg" alt="watch-band" />
+      <div className="bandImage" style={{ zIndex: 99 }}>
+        <img src={centeredDial.img} alt="watch-band" />
       </div>
 
       <div className="carouselWrapper">
@@ -234,11 +232,12 @@ const CarouselWithSnap = ({ setCenteredDial }) => {
             WebkitOverflowScrolling: "touch",
           }}
         >
-          {watches.map((item, index) => (
+          {watchBands.map((item, index) => (
             <div
               className="dialItem"
               key={index}
-              onClick={() => handleDialClick(index)}
+              style={{ zIndex: 0 }}
+            //   onClick={() => handleDialClick(index)}
             >
               <img src={item.img} alt={item.name} />
             </div>
@@ -256,4 +255,4 @@ const CarouselWithSnap = ({ setCenteredDial }) => {
   );
 };
 
-export default CarouselWithSnap;
+export default BandCarousel;

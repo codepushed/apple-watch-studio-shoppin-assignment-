@@ -3,9 +3,10 @@ import React, { useState } from "react";
 import CarouselWithSnap from "../CarouselWithSnap";
 import Tabs from "../Tabs";
 
-import { watches } from "../../Static";
+import { watchBands, watches } from "../../Static";
 import AppBar from "../AppBar";
 import SizeCarousel from "../CarouselWithSnap/SizeCarousel";
+import BandCarousel from "../CarouselWithSnap/BandCarousel";
 
 const WatchStudioHero = () => {
   const [isShrunk, setIsShrunk] = useState(false);
@@ -17,6 +18,7 @@ const WatchStudioHero = () => {
   const [toggleSize, setToggleSize] = useState(false);
   const [watchView, setWatchView] = useState(false);
   const [tab, setTab] = useState(1);
+  const [band, setBand] = useState(watchBands[35]);
 
   const handleButtonClick = () => {
     setIsLoading(true);
@@ -66,14 +68,14 @@ const WatchStudioHero = () => {
           </div>
         )}
 
-        {!isCarouselVisible && (
+        {!isCarouselVisible && tab === 1 && (
           <div
             className={`watchStudioHeroImg ${isShrunk ? "shrink" : ""}`}
             onTransitionEnd={handleTransitionEnd}
           >
             <div className="watchStudioDial">
               <img
-                src="/assets/watch-band.jpeg"
+                src={band?.img}
                 alt="watch-dial"
                 className={isFading ? "fadeEffect" : ""}
               />
@@ -100,8 +102,12 @@ const WatchStudioHero = () => {
               ) : tab === 1 ? (
                 <CarouselWithSnap setCenteredDial={setCenteredDial} />
               ) : (
-                " "
+                ""
               ))}
+
+              
+
+              {tab ===2 && <BandCarousel setBand={setBand} centeredDial={centeredDial} />}
 
             <div className="watchDetailsContainer">
               <p
@@ -114,7 +120,7 @@ const WatchStudioHero = () => {
                 Apple Watch {centeredDial?.model}
               </p>
               <p className="watchDetailsMore">
-                {centeredDial?.size} <span>mm</span> {centeredDial?.model}{" "}
+                {centeredDial?.size} <span>mm</span> {centeredDial?.model}
                 {centeredDial?.name}
                 <span>with</span>
                 {centeredDial?.band}
