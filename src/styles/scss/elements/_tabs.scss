@@ -10,12 +10,21 @@
   align-items: center;
   justify-content: center;
   gap: 10px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  width: 100%;
+}
+
+.tabs::-webkit-scrollbar {
+  display: none;
 }
 
 .case-button {
   width: 60px;
   white-space: nowrap;
   overflow: hidden;
+  flex-shrink: 0;
 }
 
 .case-button.expanded {
@@ -23,7 +32,7 @@
 }
 
 .case-button.expandedList {
-  width: 880px;
+  width: max-content;
 }
 
 .case-button.expandedSize {
@@ -43,4 +52,16 @@
 
 .bandTypes {
   gap: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .caseTypes {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  
+  .caseTypes::-webkit-scrollbar {
+    display: none;
+  }
 }
