@@ -19,7 +19,7 @@
 
 @font-face {
   font-family: "Sfpro-light";
-  src: url("/fonts/SFPRO/FontsFree-Net-SFProDisplay-Light.ttf") format("opentype");
+  src: url("/fonts/SFPRO/FontsFree-Net-SFProDisplay-Light.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -30,6 +30,10 @@
   margin: 0;
   padding: 0;
   
+}
+
+body {
+  font-family: "Sfpro-regular", sans-serif;
 }
 
 // font-family: 'MyFont1', sans-serif;
