@@ -3,15 +3,20 @@ import Box from "@mui/material/Box";
 import Divider from "@mui/material/Divider";
 import Typography from "@mui/material/Typography";
 import Modals from "@mui/material/Modal";
+import { useDispatch } from "react-redux";
 
 import { collections } from "../../Static";
-import { collectionModalStyle } from "@/helpers/basic";
+import { collectionModalStyle } from "../../helpers/basic";
+import { saveCollection } from "../../store/slices/studio";
 
 const Modal = ({ open, handleClose }) => {
   const [isActive, setIsActive] = useState(0);
+  const dispatch = useDispatch();
 
   const handleCollectionActive = (index) => {
     setIsActive(index);
+    dispatch(saveCollection(index));
+    handleClose();
   };
 
   return (

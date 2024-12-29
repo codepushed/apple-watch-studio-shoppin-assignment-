@@ -1,11 +1,15 @@
 import React, { useRef, useEffect, useState } from "react";
+import { useSelector } from "react-redux";
 
 import { watches } from "../../Static";
+import { watchesByCollection } from "../../helpers";
 
 const CarouselWithSnap = ({ setCenteredDial }) => {
   const carouselRef = useRef(null);
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(true);
+  const collection = useSelector((state) => state.studio.collection);
+
 
   const updateScrollButtons = () => {
     if (carouselRef.current) {
@@ -23,13 +27,13 @@ const CarouselWithSnap = ({ setCenteredDial }) => {
   //     const itemWidth = 400;
   //     const scrollPosition = carousel.scrollLeft;
   //     const visibleWidth = carousel.offsetWidth;
-  
+
   //     const nearestIndex = Math.round(scrollPosition / itemWidth);
   //     const totalItems = watches.length;
   //     const clampedIndex = Math.max(0, Math.min(nearestIndex, totalItems - 1));
-  //     const targetScrollPosition = 
+  //     const targetScrollPosition =
   //     clampedIndex * itemWidth - (visibleWidth / 2 - itemWidth / 2);
-  
+
   //     carousel.scrollTo({
   //       left: targetScrollPosition,
   //       behavior: "smooth",
@@ -37,33 +41,28 @@ const CarouselWithSnap = ({ setCenteredDial }) => {
   //     setCenteredDial(watches[clampedIndex]);
   //   }
   // };
-  
 
   // let scrollTimeout;
 
   // const handleScrollStop = () => {
   //   clearTimeout(scrollTimeout);
   //   scrollTimeout = setTimeout(() => {
-  //     applyMagneticPull(); 
+  //     applyMagneticPull();
   //   }, 150);
   // };
-  
-  
+
   // useEffect(() => {
   //   if (carouselRef.current) {
   //     const carousel = carouselRef.current;
-  
+
   //     const onScroll = () => handleScrollStop();
   //     carousel.addEventListener("scroll", onScroll);
-  
 
   //     return () => {
   //       carousel.removeEventListener("scroll", onScroll);
   //     };
   //   }
   // }, []);
-  
-
 
   const scrollToDirection = (direction) => {
     if (carouselRef.current) {
@@ -106,9 +105,6 @@ const CarouselWithSnap = ({ setCenteredDial }) => {
       setCenteredDial(watches[index]);
     }
   };
-
-
-  
 
   const scrollToNearestWithBounce = () => {
     if (carouselRef.current) {
@@ -208,7 +204,6 @@ const CarouselWithSnap = ({ setCenteredDial }) => {
       });
     }
   }, []);
-  
 
   return (
     <div className="carouselContainer">
@@ -235,7 +230,7 @@ const CarouselWithSnap = ({ setCenteredDial }) => {
             WebkitOverflowScrolling: "touch",
           }}
         >
-          {watches.map((item, index) => (
+          {watchesByCollection(collection, watches).map((item, index) => (
             <div
               className="dialItem"
               key={index}

@@ -139,3 +139,14 @@ export const CopyToClipboard = async () => {
     console.error("Error copying image to clipboard:", error);
   }
 };
+
+export const watchesByCollection = (collection, watches) => {
+  const collectionMap = {
+    0: "Series 10",
+    1: "Hermes",
+    2: "SE",
+  };
+
+  const targetCollection = collectionMap[collection];
+  return watches.filter((item) => item.collection === targetCollection);
+};

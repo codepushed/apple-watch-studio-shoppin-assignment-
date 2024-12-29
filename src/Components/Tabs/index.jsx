@@ -22,7 +22,7 @@ const Tabs = ({ handleCases, toggleSize, setToggleSize, isFading, setTab, handle
   const handleWatchCase = () => {
     setIsExpanded(true);
     setListBands(false);
-    // handleCases();
+    handleCases(); //neeed fixx here
     setTab(1);
   };
 
