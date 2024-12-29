@@ -1,0 +1,67 @@
+.tabsContainer {
+  width: 100%;
+  margin-top: 70px;
+  position: absolute;
+  bottom: 8%;
+}
+
+.tabs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  width: 100%;
+}
+
+.tabs::-webkit-scrollbar {
+  display: none;
+}
+
+.case-button {
+  width: 60px;
+  white-space: nowrap;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.case-button.expanded {
+  width: 160px;
+}
+
+.case-button.expandedList {
+  width: 880px;
+}
+
+.case-button.expandedSize {
+  width: 130px;
+}
+
+.caseTypes {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.watchCaseTypeActive {
+  font-weight: 700 !important;
+  font-family: "Sfpro-medium", sans-serif;
+}
+
+.bandTypes {
+  gap: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .caseTypes {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  
+  .caseTypes::-webkit-scrollbar {
+    display: none;
+  }
+}

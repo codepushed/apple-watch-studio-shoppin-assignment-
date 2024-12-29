@@ -1,0 +1,183 @@
+.watchStudioHeroContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.watchStudioHeroContent {
+  text-align: left;
+  z-index: 1;
+}
+
+.watchStudioHeroHeading {
+  font-weight: 400;
+  font-size: 34px;
+  font-family: "Sfpro-regular";
+  letter-spacing: 0.011em;
+  line-height: 1.0625;
+  color: #1d1d1f;
+}
+
+.watchStudioHeroTypography > h3 {
+  font-size: 21px;
+  color: #1d1d1f;
+  font-weight: 400;
+  letter-spacing: 0.011em;
+  font-family: "Sfpro-regular";
+  line-height: 1.381002381;
+  padding-bottom: 10px;
+}
+
+.watchStudioBtn {
+  padding-top: 43px;
+}
+
+.watchStudioHeroImg {
+  position: absolute;
+  width: 900px;
+  transition: transform 1.5s ease, width 1.5s ease, top 1.5s ease;
+  margin-top: 50px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.watchStudioDial {
+  height: auto;
+  position: absolute;
+  transition: all 1.5s ease;
+}
+
+.watchStudioDial > img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.watchStudioCase {
+  height: auto;
+  position: absolute;
+  transition: all 1.5s ease;
+}
+
+.watchStudioCase > img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.watchStudioCaseListing {
+  height: auto;
+  position: absolute;
+  transition: all 1.5s ease;
+}
+
+.watchStudioCaseListing > img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.shrink {
+  width: 800px;
+  position: fixed;
+  top: 38%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-30vh) scale(0.5);
+  z-index: 10;
+}
+
+.new-component {
+  animation: fadeIn 1.5s forwards;
+}
+
+.watchDetailsContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  flex-direction: column;
+  padding-top: 2vh;
+  position: absolute;
+  bottom: 20%;
+}
+
+.watchDetailsView {
+  color: #06c;
+  font-size: 13px;
+  text-decoration: underline;
+  font-family: "Sfpro-light", sans-serif;
+  margin-bottom: 12px;
+  font-weight: 400;
+  letter-spacing: 0.011em;
+  cursor: pointer;
+  line-height: 1.3333733333;
+}
+
+.watchDetailsName {
+  margin-bottom: 4px;
+  color: #6e6e73;
+  font-family: "Sfpro-medium", sans-serif;
+  text-transform: uppercase;
+  font-weight: 600 !important;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  line-height: 1.3333733333;
+  opacity: 0.8;
+}
+
+.watchDetailsMore {
+  margin-bottom: 5px;
+  color: #1d1d1f;
+  font-family: "Sfpro-medium", sans-serif;
+  font-weight: 600 !important;
+  font-size: 14px;
+  letter-spacing: 0.1em;
+  line-height: 1.3333733333;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.watchDetailsPrice {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.4285914286;
+  color: #1d1d1f;
+  font-family: "Sfpro-light", sans-serif;
+  letter-spacing: 0.1em;
+}
+.watchStudioHeroMobile {
+  width: 100% !important;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .watchStudioHeroTypography {
+    padding: 0 30px;
+  }
+
+  .watchStudioHeroHeading {
+    font-size: 24px;
+    line-height: 55px;
+  }
+  .watchStudioHeroImg {
+    width: 100%;
+  }
+  .watchStudioWatching {
+    width: 900px;
+  }
+}
