@@ -6,7 +6,14 @@ const nextConfig = {
 
 export default {
   ...nextConfig,
-
+  async headers() {
+    return [
+      {
+        source: "/fonts/:path*",
+        headers: [{ key: "Access-Control-Allow-Origin", value: "*" }],
+      },
+    ];
+  },
   // Can be safely removed in newer versions of Next.js
   future: {
     webpack5: true, // Ensure webpack 5 is used
