@@ -169,3 +169,31 @@
   font-size: 16px;
   cursor: pointer;
 }
+
+@media (max-width: 768px) {
+  .watchItem.small {
+    padding-left: 0px;
+  }
+
+  .watchItem.big {
+    padding-right: 0px;
+  }
+
+  .carouselButton.Sizeleft {
+    top: 35%;
+  }
+  .carouselButton.Sizeright {
+    top: 35%;
+  }
+
+  .bandImages {
+    width: 330px;
+  }
+  .dialImage {
+    width: 350px;
+  }
+  .watchContainer {
+    max-height: 500px;
+    height: 500px;
+  }
+}
