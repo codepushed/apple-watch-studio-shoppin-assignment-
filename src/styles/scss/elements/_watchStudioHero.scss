@@ -83,7 +83,7 @@
 .shrink {
   width: 800px;
   position: fixed;
-  top: 42%;
+  top: 38%;
   left: 50%;
   transform: translateX(-50%) translateY(-30vh) scale(0.5);
   z-index: 10;
@@ -152,6 +152,9 @@
   font-family: "Sfpro-light", sans-serif;
   letter-spacing: 0.1em;
 }
+.watchStudioHeroMobile {
+  width: 100% !important;
+}
 
 @keyframes fadeIn {
   0% {
@@ -159,5 +162,22 @@
   }
   100% {
     opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .watchStudioHeroTypography {
+    padding: 0 30px;
+  }
+
+  .watchStudioHeroHeading {
+    font-size: 24px;
+    line-height: 55px;
+  }
+  .watchStudioHeroImg {
+    width: 100%;
+  }
+  .watchStudioWatching {
+    width: 900px;
   }
 }

@@ -282,5 +282,3 @@ export const uploadCanvasToCloudinary = async () => {
     return { success: false, error: error.message };
   }
 };
-
-

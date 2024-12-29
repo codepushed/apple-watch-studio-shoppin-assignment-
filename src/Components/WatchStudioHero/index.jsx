@@ -8,7 +8,6 @@ import BandCarousel from "../CarouselWithSnap/BandCarousel";
 
 import { watchBands, watches } from "../../Static";
 
-
 const WatchStudioHero = () => {
   const [isShrunk, setIsShrunk] = useState(false);
   const [isTransitionComplete, setIsTransitionComplete] = useState(false);
@@ -71,7 +70,9 @@ const WatchStudioHero = () => {
 
         {!isCarouselVisible && tab === 1 && (
           <div
-            className={`watchStudioHeroImg ${isShrunk ? "shrink" : ""}`}
+            className={`watchStudioHeroImg ${
+              isShrunk ? "shrink watchStudioWatching" : ""
+            }`}
             onTransitionEnd={handleTransitionEnd}
           >
             {watchView ? (
