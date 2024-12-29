@@ -60,7 +60,7 @@ export const watches = [
     name: "Silver Titanium Case",
     bodyType: "Titanium",
     band: "Satiné Grand H",
-    img: "/assets/dials/watch-case-46-titanium-slate-cell-s10_VW_PF+watch-face-46-titanium-slate-s10_VW_PF.png",
+    img: "/assets/dials/hermes/46mm Silver Titanium Case with Satiné Grand H.png",
   },
   {
     collection: "SE",
@@ -69,7 +69,7 @@ export const watches = [
     name: "Midnight Aluminum Case",
     bodyType: "Aluminum",
     band: "Star Fruit Solo Loop",
-    img: "/assets/dials/watch-case-46-titanium-slate-cell-s10_VW_PF+watch-face-46-titanium-slate-s10_VW_PF.png",
+    img: "/assets/dials/se/watch-case-44-aluminum-midnight-nc-se_VW_PF+watch-face-44-aluminum-midnight-se_VW_PF.png",
   },
   {
     collection: "SE",
@@ -78,7 +78,7 @@ export const watches = [
     name: "Starlight Aluminum Case",
     bodyType: "Aluminum",
     band: "Star Fruit Solo Loop",
-    img: "/assets/dials/watch-case-46-titanium-slate-cell-s10_VW_PF+watch-face-46-titanium-slate-s10_VW_PF.png",
+    img: "/assets/dials/se/watch-case-44-aluminum-silver-nc-se_VW_PF+watch-face-44-aluminum-silver-se_VW_PF.png",
   },
   {
     collection: "SE",
@@ -87,7 +87,7 @@ export const watches = [
     name: "Silver Aluminum Case",
     bodyType: "Aluminum",
     band: "Star Fruit Solo Loop",
-    img: "/assets/dials/watch-case-46-titanium-slate-cell-s10_VW_PF+watch-face-46-titanium-slate-s10_VW_PF.png",
+    img: "/assets/dials/se/watch-case-44-aluminum-silver-nc-se_VW_PF+watch-face-44-aluminum-silver-se_VW_PF.png",
   },
 ];
 
@@ -1056,13 +1056,13 @@ export const watchBands = [
     collection: "Hermes",
     name: "Gold/Écru Toile H Single Tour",
     type: "Hermes Toile H",
-    img: "/assets/bands/Lake Green Solo Loop.jpg", // default
+    img: "/assets/bands/hermes/46mm Silver Titanium Case with Gold Écru Toile H Single Tour.jpg",
     price: 1299,
     editions: [
       {
         name: "Silver Titanium Case",
         bodyType: "Titanium",
-        img: "/assets/series10/Blue Flame Nike Sport Band/46mm Silver Aluminum Case.png",
+        img: "/assets/dials/hermes/46mm Silver Titanium Case with Gold Écru Toile H Single Tour.png",
       },
     ],
   },
@@ -1070,13 +1070,13 @@ export const watchBands = [
     collection: "Hermes",
     name: "Navy Torsade Single Tour",
     type: "Hermes Torsade",
-    img: "/assets/bands/Blue Flame Nike Sport Band.jpg",
+    img: "/assets/bands/hermes/46mm Silver Titanium Case with Navy Torsade Single Tour.jpg",
     price: 1299,
     editions: [
       {
         name: "Silver Titanium Case",
         bodyType: "Titanium",
-        img: "/assets/series10/Blue Flame Nike Sport Band/46mm Silver Aluminum Case.png",
+        img: "/assets/dials/hermes/46mm Silver Titanium Case with Navy Torsade Single Tour.png",
       },
     ],
   },
@@ -1084,13 +1084,13 @@ export const watchBands = [
     collection: "Hermes",
     name: "Rouge Grenat Torsade Single Tour",
     type: "Hermes Torsade",
-    img: "/assets/bands/Blue Flame Nike Sport Band.jpg",
+    img: "/assets/bands/hermes/46mm Silver Titanium Case with Rouge Grenat Torsade Single Tour.jpg",
     price: 1299,
     editions: [
       {
         name: "Silver Titanium Case",
         bodyType: "Titanium",
-        img: "/assets/series10/Blue Flame Nike Sport Band/46mm Silver Aluminum Case.png",
+        img: "/assets/dials/hermes/46mm Silver Titanium Case with Rouge Grenat Torsade Single Tour.png",
       },
     ],
   },
@@ -1098,13 +1098,13 @@ export const watchBands = [
     collection: "Hermes",
     name: "Béton Kilim Single Tour",
     type: "Hermes Kilim",
-    img: "/assets/bands/Blue Flame Nike Sport Band.jpg",
+    img: "/assets/bands/hermes/46mm Silver Titanium Case with Béton Kilim Single Tour.jpg",
     price: 1299,
     editions: [
       {
         name: "Silver Titanium Case",
         bodyType: "Titanium",
-        img: "/assets/series10/Blue Flame Nike Sport Band/46mm Silver Aluminum Case.png",
+        img: "/assets/dials/hermes/46mm Silver Titanium Case with Béton Kilim Single Tour.png",
       },
     ],
   },
@@ -1112,13 +1112,13 @@ export const watchBands = [
     collection: "Hermes",
     name: "Noir Kilim Single Tour",
     type: "Hermes Kilim",
-    img: "/assets/bands/Blue Flame Nike Sport Band.jpg",
+    img: "/assets/bands/hermes/46mm Silver Titanium Case with Noir Kilim Single Tour.jpg",
     price: 1299,
     editions: [
       {
         name: "Silver Titanium Case",
         bodyType: "Titanium",
-        img: "/assets/series10/Blue Flame Nike Sport Band/46mm Silver Aluminum Case.png",
+        img: "/assets/dials/hermes/46mm Silver Titanium Case with Orange Kilim Single Tour.png",
       },
     ],
   },
@@ -1126,13 +1126,13 @@ export const watchBands = [
     collection: "Hermes",
     name: "Orange Kilim Single Tour",
     type: "Hermes Kilim",
-    img: "/assets/bands/Blue Flame Nike Sport Band.jpg",
+    img: "/assets/bands/hermes/46mm Silver Titanium Case with Orange Kilim Single Tour.jpg",
     price: 1299,
     editions: [
       {
         name: "Silver Titanium Case",
         bodyType: "Titanium",
-        img: "/assets/series10/Blue Flame Nike Sport Band/46mm Silver Aluminum Case.png",
+        img: "/assets/dials/hermes/46mm Silver Titanium Case with Orange Kilim Single Tour.png",
       },
     ],
   },
@@ -1140,13 +1140,13 @@ export const watchBands = [
     collection: "Hermes",
     name: "Bleu de France Kilim Single Tour",
     type: "Hermes Kilim",
-    img: "/assets/bands/Blue Flame Nike Sport Band.jpg",
+    img: "/assets/bands/hermes/46mm Silver Titanium Case with Bleu de France Kilim Single Tour.jpg",
     price: 1299,
     editions: [
       {
         name: "Silver Titanium Case",
         bodyType: "Titanium",
-        img: "/assets/series10/Blue Flame Nike Sport Band/46mm Silver Aluminum Case.png",
+        img: "/assets/dials/hermes/46mm Silver Titanium Case with Bleu de France Kilim Single Tour.png",
       },
     ],
   },
@@ -1154,27 +1154,13 @@ export const watchBands = [
     collection: "Hermes",
     name: "Vert Moyen Kilim Single Tour",
     type: "Hermes Kilim",
-    img: "/assets/bands/Blue Flame Nike Sport Band.jpg",
+    img: "/assets/bands/hermes/46mm Silver Titanium Case with Vert Moyen Kilim Single Tour.jpg",
     price: 1299,
     editions: [
       {
         name: "Silver Titanium Case",
         bodyType: "Titanium",
-        img: "/assets/series10/Blue Flame Nike Sport Band/46mm Silver Aluminum Case.png",
-      },
-    ],
-  },
-  {
-    collection: "Hermes",
-    name: "Vert Moyen Kilim Single Tour",
-    type: "Hermes Kilim",
-    img: "/assets/bands/Blue Flame Nike Sport Band.jpg",
-    price: 1299,
-    editions: [
-      {
-        name: "Silver Titanium Case",
-        bodyType: "Titanium",
-        img: "/assets/series10/Blue Flame Nike Sport Band/46mm Silver Aluminum Case.png",
+        img: "/assets/dials/hermes/46mm Silver Titanium Case with Vert Moyen Kilim Single Tour.png",
       },
     ],
   },
