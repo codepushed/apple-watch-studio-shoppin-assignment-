@@ -4,7 +4,10 @@ import Divider from "@mui/material/Divider";
 import Modals from "@mui/material/Modal";
 
 import { saveModalstyle } from "../../helpers/basic";
-import { CopyToClipboard } from "../../helpers";
+import {
+  CopyToClipboard,
+  uploadCanvasToCloudinary,
+} from "../../helpers";
 
 const SaveModal = ({ isSaveModalOpen, handleSaveModalClose }) => {
   const [isCopied, setIsCopied] = useState(false);
@@ -40,6 +43,11 @@ const SaveModal = ({ isSaveModalOpen, handleSaveModalClose }) => {
     )}&text=${encodeURIComponent(textToShare)}`;
     window.open(linkedInUrl, "_blank");
   };
+
+  // const handleUploadClick =  async() => {
+  //   const data = await uploadCanvasToCloudinary();
+  //   console.log(data);
+  // };
 
   return (
     <div>
