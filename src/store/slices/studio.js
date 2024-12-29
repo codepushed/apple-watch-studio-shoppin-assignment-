@@ -3,6 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
   band: "",
   dial: "",
+  collection: "",
 };
 
 export const studioSlice = createSlice({
@@ -15,9 +16,12 @@ export const studioSlice = createSlice({
     saveDial: (state, action) => {
       state.dial = action.payload;
     },
+    saveCollection: (state, action) => {
+      state.collection = action.payload;
+    },
   },
 });
 
-export const { saveBand, saveDial } = studioSlice.actions;
+export const { saveBand, saveDial, saveCollection } = studioSlice.actions;
 
 export default studioSlice.reducer;
