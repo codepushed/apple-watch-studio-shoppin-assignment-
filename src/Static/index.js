@@ -2070,7 +2070,6 @@ export const sideView = [
     band: "Midnight Braided Solo Loop",
     img: "/assets/sideview/46mm Slate Titanium Case with Midnight Braided Solo Loop.jpg",
   },
-//doing
   {
     dial: "Rose Gold Aluminum",
     band: "Denim Braided Solo Loop",
@@ -2100,6 +2099,657 @@ export const sideView = [
     dial: "Slate Titanium",
     band: "Denim Braided Solo Loop",
     img: "/assets/sideview/46mm Slate Titanium Case with Denim Braided Solo Loop.jpg",
+  },
+
+  {
+    dial: "Rose Gold Aluminum",
+    band: "Chartreuse Braided Solo Loop",
+    img: "/assets/sideview/46mm Rose Gold Aluminum Case with Chartreuse Braided Solo Loop.jpg",
+  },
+  {
+    dial: "Silver Aluminum",
+    band: "Chartreuse Braided Solo Loop",
+    img: "/assets/sideview/46mm Silver Aluminum Case with Chartreuse Braided Solo Loop.jpg",
+  },
+  {
+    dial: "Jet Black",
+    band: "Chartreuse Braided Solo Loop",
+    img: "/assets/sideview/46mm Jet Black Aluminum Case with Chartreuse Braided Solo Loop.jpg",
+  },
+  {
+    dial: "Natural Titanium",
+    band: "Chartreuse Braided Solo Loop",
+    img: "/assets/sideview/46mm Natural Titanium Case with Chartreuse Braided Solo Loop.jpg",
+  },
+
+  {
+    dial: "Gold Titanium",
+    band: "Magenta Braided Solo Loop",
+    img: "/assets/sideview/46mm Gold Titanium Case with Magenta Braided Solo Loop.jpg",
+  },
+  {
+    dial: "Slate Titanium",
+    band: "Magenta Braided Solo Loop",
+    img: "/assets/sideview/46mm Slate Titanium Case with Magenta Braided Solo Loop.jpg",
+  },
+
+  {
+    dial: "Rose Gold Aluminum",
+    band: "Magenta Braided Solo Loop",
+    img: "/assets/sideview/46mm Rose Gold Aluminum Case with Magenta Braided Solo Loop.jpg",
+  },
+  {
+    dial: "Silver Aluminum",
+    band: "Magenta Braided Solo Loop",
+    img: "/assets/sideview/46mm Silver Aluminum Case with Magenta Braided Solo Loop.jpg",
+  },
+  {
+    dial: "Jet Black",
+    band: "Magenta Braided Solo Loop",
+    img: "/assets/sideview/46mm Jet Black Aluminum Case with Magenta Braided Solo Loop.jpg",
+  },
+  {
+    dial: "Natural Titanium",
+    band: "Magenta Braided Solo Loop",
+    img: "/assets/sideview/46mm Natural Titanium Case with Magenta Braided Solo Loop.jpg",
+  },
+  {
+    dial: "Gold Titanium",
+    band: "Magenta Braided Solo Loop",
+    img: "/assets/sideview/46mm Gold Titanium Case with Magenta Braided Solo Loop.jpg",
+  },
+  {
+    dial: "Slate Titanium",
+    band: "Magenta Braided Solo Loop",
+    img: "/assets/sideview/46mm Slate Titanium Case with Magenta Braided Solo Loop.jpg",
+  },
+
+  {
+    dial: "Gold Titanium",
+    band: "Pride Edition Braided Solo Loop",
+    img: "/assets/sideview/46mm Gold Titanium Case with Pride Edition Braided Solo Loop.jpg",
+  },
+  {
+    dial: "Slate Titanium",
+    band: "Pride Edition Braided Solo Loop",
+    img: "/assets/sideview/46mm Slate Titanium Case with Pride Edition Braided Solo Loop.jpg",
+  },
+
+  {
+    dial: "Rose Gold Aluminum",
+    band: "Pride Edition Braided Solo Loop",
+    img: "/assets/sideview/46mm Rose Gold Aluminum Case with Pride Edition Braided Solo Loop.jpg",
+  },
+  {
+    dial: "Silver Aluminum",
+    band: "Pride Edition Braided Solo Loop",
+    img: "/assets/sideview/46mm Silver Aluminum Case with Pride Edition Braided Solo Loop.jpg",
+  },
+  {
+    dial: "Jet Black",
+    band: "Pride Edition Braided Solo Loop",
+    img: "/assets/sideview/46mm Jet Black Aluminum Case with Pride Edition Braided Solo Loop.jpg",
+  },
+  {
+    dial: "Natural Titanium",
+    band: "Pride Edition Braided Solo Loop",
+    img: "/assets/sideview/46mm Natural Titanium Case with Pride Edition Braided Solo Loop.jpg",
+  },
+  {
+    dial: "Gold Titanium",
+    band: "Pride Edition Braided Solo Loop",
+    img: "/assets/sideview/46mm Gold Titanium Case with Pride Edition Braided Solo Loop.jpg",
+  },
+  {
+    dial: "Slate Titanium",
+    band: "Pride Edition Braided Solo Loop",
+    img: "/assets/sideview/46mm Slate Titanium Case with Pride Edition Braided Solo Loop.jpg",
+  },
+
+  {
+    dial: "Gold Titanium",
+    band: "Black Unity Braided Solo Loop",
+    img: "/assets/sideview/46mm Gold Titanium Case with Black Unity Braided Solo Loop.jpg",
+  },
+  {
+    dial: "Slate Titanium",
+    band: "Black Unity Braided Solo Loop",
+    img: "/assets/sideview/46mm Slate Titanium Case with Black Unity Braided Solo Loop.jpg",
+  },
+
+
+  {
+    dial: "Rose Gold Aluminum",
+    band: "Star Fruit Solo Loop",
+    img: "/assets/sideview/46mm Rose Gold Aluminum Case with Star Fruit Solo Loop.jpg",
+  },
+  {
+    dial: "Silver Aluminum",
+    band: "Star Fruit Solo Loop",
+    img: "/assets/sideview/46mm Silver Aluminum Case with Star Fruit Solo Loop.jpg",
+  },
+  {
+    dial: "Jet Black",
+    band: "Star Fruit Solo Loop",
+    img: "/assets/sideview/46mm Jet Black Aluminum Case with Star Fruit Solo Loop.jpg",
+  },
+  {
+    dial: "Natural Titanium",
+    band: "Star Fruit Solo Loop",
+    img: "/assets/sideview/46mm Natural Titanium Case with Star Fruit Solo Loop.jpg",
+  },
+  {
+    dial: "Gold Titanium",
+    band: "Star Fruit Solo Loop",
+    img: "/assets/sideview/46mm Gold Titanium Case with Star Fruit Solo Loop.jpg",
+  },
+  {
+    dial: "Slate Titanium",
+    band: "Star Fruit Solo Loop",
+    img: "/assets/sideview/46mm Slate Titanium Case with Star Fruit Solo Loop.jpg",
+  },
+
+
+  {
+    dial: "Rose Gold Aluminum",
+    band: "Ultramarine Solo Loop",
+    img: "/assets/sideview/46mm Rose Gold Aluminum Case with Ultramarine Solo Loop.jpg",
+  },
+  {
+    dial: "Silver Aluminum",
+    band: "Ultramarine Solo Loop",
+    img: "/assets/sideview/46mm Silver Aluminum Case with Ultramarine Solo Loop.jpg",
+  },
+  {
+    dial: "Jet Black",
+    band: "Ultramarine Solo Loop",
+    img: "/assets/sideview/46mm Jet Black Aluminum Case with Ultramarine Solo Loop.jpg",
+  },
+  {
+    dial: "Natural Titanium",
+    band: "Ultramarine Solo Loop",
+    img: "/assets/sideview/46mm Natural Titanium Case with Ultramarine Solo Loop.jpg",
+  },
+  {
+    dial: "Gold Titanium",
+    band: "Ultramarine Solo Loop",
+    img: "/assets/sideview/46mm Gold Titanium Case with Ultramarine Solo Loop.jpg",
+  },
+  {
+    dial: "Slate Titanium",
+    band: "Ultramarine Solo Loop",
+    img: "/assets/sideview/46mm Slate Titanium Case with Ultramarine Solo Loop.jpg",
+  },
+
+  {
+    dial: "Rose Gold Aluminum",
+    band: "Lake Green Solo Loop",
+    img: "/assets/sideview/46mm Rose Gold Aluminum Case with Lake Green Solo Loop.jpg",
+  },
+  {
+    dial: "Silver Aluminum",
+    band: "Lake Green Solo Loop",
+    img: "/assets/sideview/46mm Silver Aluminum Case with Lake Green Solo Loop.jpg",
+  },
+  {
+    dial: "Jet Black",
+    band: "Lake Green Solo Loop",
+    img: "/assets/sideview/46mm Jet Black Aluminum Case with Lake Green Solo Loop.jpg",
+  },
+  {
+    dial: "Natural Titanium",
+    band: "Lake Green Solo Loop",
+    img: "/assets/sideview/46mm Natural Titanium Case with Lake Green Solo Loop.jpg",
+  },
+  {
+    dial: "Gold Titanium",
+    band: "Lake Green Solo Loop",
+    img: "/assets/sideview/46mm Gold Titanium Case with Lake Green Solo Loop.jpg",
+  },
+  {
+    dial: "Slate Titanium",
+    band: "Lake Green Solo Loop",
+    img: "/assets/sideview/46mm Slate Titanium Case with Lake Green Solo Loop.jpg",
+  },
+
+
+  {
+    dial: "Rose Gold Aluminum",
+    band: "Black Solo Loop",
+    img: "/assets/sideview/46mm Rose Gold Aluminum Case with Black Solo Loop.jpg",
+  },
+  {
+    dial: "Silver Aluminum",
+    band: "Black Solo Loop",
+    img: "/assets/sideview/46mm Silver Aluminum Case with Lake Black Loop.jpg",
+  },
+  {
+    dial: "Jet Black",
+    band: "Black Solo Loop",
+    img: "/assets/sideview/46mm Jet Black Aluminum Case with Black Solo Loop.jpg",
+  },
+  {
+    dial: "Natural Titanium",
+    band: "Black Solo Loop",
+    img: "/assets/sideview/46mm Natural Titanium Case with Black Solo Loop.jpg",
+  },
+  {
+    dial: "Gold Titanium",
+    band: "Black Solo Loop",
+    img: "/assets/sideview/46mm Gold Titanium Case with Black Solo Loop.jpg",
+  },
+  {
+    dial: "Slate Titanium",
+    band: "Black Solo Loop",
+    img: "/assets/sideview/46mm Slate Titanium Case with Black Solo Loop.jpg",
+  },
+
+  {
+    dial: "Rose Gold Aluminum",
+    band: "Light Blush Solo Loop",
+    img: "/assets/sideview/46mm Rose Gold Aluminum Case with Light Blush Solo Loop.jpg",
+  },
+  {
+    dial: "Silver Aluminum",
+    band: "Light Blush Solo Loop",
+    img: "/assets/sideview/46mm Silver Aluminum Case with Lake Light Blush Loop.jpg",
+  },
+  {
+    dial: "Jet Black",
+    band: "Light Blush Solo Loop",
+    img: "/assets/sideview/46mm Jet Black Aluminum Case with Light Blush Solo Loop.jpg",
+  },
+  {
+    dial: "Natural Titanium",
+    band: "Light Blush Solo Loop",
+    img: "/assets/sideview/46mm Natural Titanium Case with Light Blush Solo Loop.jpg",
+  },
+  {
+    dial: "Gold Titanium",
+    band: "Light Blush Solo Loop",
+    img: "/assets/sideview/46mm Gold Titanium Case with Light Blush Solo Loop.jpg",
+  },
+  {
+    dial: "Slate Titanium",
+    band: "Light Blush Solo Loop",
+    img: "/assets/sideview/46mm Slate Titanium Case with Light Blush Solo Loop.jpg",
+  },
+
+  {
+    dial: "Rose Gold Aluminum",
+    band: "BlackBlue Nike Sport Loop",
+    img: "/assets/sideview/46mm Rose Gold Aluminum Case with BlackBlue Nike Sport Loop.jpg",
+  },
+  {
+    dial: "Silver Aluminum",
+    band: "BlackBlue Nike Sport Loop",
+    img: "/assets/sideview/46mm Silver Aluminum Case with BlackBlue Nike Sport Loop.jpg",
+  },
+  {
+    dial: "Jet Black",
+    band: "BlackBlue Nike Sport Loop",
+    img: "/assets/sideview/46mm Jet Black Aluminum Case with BlackBlue Nike Sport Loop.jpg",
+  },
+  {
+    dial: "Natural Titanium",
+    band: "BlackBlue Nike Sport Loop",
+    img: "/assets/sideview/46mm Natural Titanium Case with BlackBlue Nike Sport Loop.jpg",
+  },
+  {
+    dial: "Gold Titanium",
+    band: "BlackBlue Nike Sport Loop",
+    img: "/assets/sideview/46mm Gold Titanium Case with BlackBlue Nike Sport Loop.jpg",
+  },
+  {
+    dial: "Slate Titanium",
+    band: "BlackBlue Nike Sport Loop",
+    img: "/assets/sideview/46mm Slate Titanium Case with BlackBlue Nike Sport Loop.jpg",
+  },
+
+
+  {
+    dial: "Rose Gold Aluminum",
+    band: "StarlightPink Nike Sport Loop",
+    img: "/assets/sideview/46mm Rose Gold Aluminum Case with StarlightPink Nike Sport Loop.jpg",
+  },
+  {
+    dial: "Silver Aluminum",
+    band: "StarlightPink Nike Sport Loop",
+    img: "/assets/sideview/46mm Silver Aluminum Case with StarlightPink Nike Sport Loop.jpg",
+  },
+  {
+    dial: "Jet Black",
+    band: "StarlightPink Nike Sport Loop",
+    img: "/assets/sideview/46mm Jet Black Aluminum Case with StarlightPink Nike Sport Loop.jpg",
+  },
+  {
+    dial: "Natural Titanium",
+    band: "StarlightPink Nike Sport Loop",
+    img: "/assets/sideview/46mm Natural Titanium Case with StarlightPink Nike Sport Loop.jpg",
+  },
+  {
+    dial: "Gold Titanium",
+    band: "StarlightPink Nike Sport Loop",
+    img: "/assets/sideview/46mm Gold Titanium Case with StarlightPink Nike Sport Loop.jpg",
+  },
+  {
+    dial: "Slate Titanium",
+    band: "StarlightPink Nike Sport Loop",
+    img: "/assets/sideview/46mm Slate Titanium Case with StarlightPink Nike Sport Loop.jpg",
+  },
+
+  {
+    dial: "Rose Gold Aluminum",
+    band: "GreyBlue Nike Sport Loop",
+    img: "/assets/sideview/46mm Rose Gold Aluminum Case with GreyBlue Nike Sport Loop.jpg",
+  },
+  {
+    dial: "Silver Aluminum",
+    band: "GreyBlue Nike Sport Loop",
+    img: "/assets/sideview/46mm Silver Aluminum Case with GreyBlue Nike Sport Loop.jpg",
+  },
+  {
+    dial: "Jet Black",
+    band: "GreyBlue Nike Sport Loop",
+    img: "/assets/sideview/46mm Jet Black Aluminum Case with GreyBlue Nike Sport Loop.jpg",
+  },
+  {
+    dial: "Natural Titanium",
+    band: "GreyBlue Nike Sport Loop",
+    img: "/assets/sideview/46mm Natural Titanium Case with GreyBlue Nike Sport Loop.jpg",
+  },
+  {
+    dial: "Gold Titanium",
+    band: "GreyBlue Nike Sport Loop",
+    img: "/assets/sideview/46mm Gold Titanium Case with GreyBlue Nike Sport Loop.jpg",
+  },
+  {
+    dial: "Slate Titanium",
+    band: "GreyBlue Nike Sport Loop",
+    img: "/assets/sideview/46mm Slate Titanium Case with GreyBlue Nike Sport Loop.jpg",
+  },
+
+  {
+    dial: "Rose Gold Aluminum",
+    band: "GreenGrey Nike Sport Loop",
+    img: "/assets/sideview/46mm Rose Gold Aluminum Case with GreenGrey Nike Sport Loop.jpg",
+  },
+  {
+    dial: "Silver Aluminum",
+    band: "GreenGrey Nike Sport Loop",
+    img: "/assets/sideview/46mm Silver Aluminum Case with GreenGrey Nike Sport Loop.jpg",
+  },
+  {
+    dial: "Jet Black",
+    band: "GreenGrey Nike Sport Loop",
+    img: "/assets/sideview/46mm Jet Black Aluminum Case with GreenGrey Nike Sport Loop.jpg",
+  },
+  {
+    dial: "Natural Titanium",
+    band: "GreenGrey Nike Sport Loop",
+    img: "/assets/sideview/46mm Natural Titanium Case with GreenGrey Nike Sport Loop.jpg",
+  },
+  {
+    dial: "Gold Titanium",
+    band: "GreenGrey Nike Sport Loop",
+    img: "/assets/sideview/46mm Gold Titanium Case with GreenGrey Nike Sport Loop.jpg",
+  },
+  {
+    dial: "Slate Titanium",
+    band: "GreenGrey Nike Sport Loop",
+    img: "/assets/sideview/46mm Slate Titanium Case with GreenGrey Nike Sport Loop.jpg",
+  },
+
+
+  {
+    dial: "Rose Gold Aluminum",
+    band: "BlueRed Nike Sport Loop",
+    img: "/assets/sideview/46mm Rose Gold Aluminum Case with BlueRed Nike Sport Loop.jpg",
+  },
+  {
+    dial: "Silver Aluminum",
+    band: "BlueRed Nike Sport Loop",
+    img: "/assets/sideview/46mm Silver Aluminum Case with BlueRed Nike Sport Loop.jpg",
+  },
+  {
+    dial: "Jet Black",
+    band: "BlueRed Nike Sport Loop",
+    img: "/assets/sideview/46mm Jet Black Aluminum Case with BlueRed Nike Sport Loop.jpg",
+  },
+  {
+    dial: "Natural Titanium",
+    band: "BlueRed Nike Sport Loop",
+    img: "/assets/sideview/46mm Natural Titanium Case with BlueRed Nike Sport Loop.jpg",
+  },
+  {
+    dial: "Gold Titanium",
+    band: "BlueRed Nike Sport Loop",
+    img: "/assets/sideview/46mm Gold Titanium Case with BlueRed Nike Sport Loop.jpg",
+  },
+  {
+    dial: "Slate Titanium",
+    band: "BlueRed Nike Sport Loop",
+    img: "/assets/sideview/46mm Slate Titanium Case with BlueRed Nike Sport Loop.jpg",
+  },
+
+  {
+    dial: "Rose Gold Aluminum",
+    band: "Volt Splash Nike Sport Band",
+    img: "/assets/sideview/46mm Rose Gold Aluminum Case with Volt Splash Nike Sport Band.jpg",
+  },
+  {
+    dial: "Silver Aluminum",
+    band: "Volt Splash Nike Sport Band",
+    img: "/assets/sideview/46mm Silver Aluminum Case with Volt Splash Nike Sport Band.jpg",
+  },
+  {
+    dial: "Jet Black",
+    band: "Volt Splash Nike Sport Band",
+    img: "/assets/sideview/46mm Jet Black Aluminum Case with Volt Splash Nike Sport Band.jpg",
+  },
+  {
+    dial: "Natural Titanium",
+    band: "Volt Splash Nike Sport Band",
+    img: "/assets/sideview/46mm Natural Titanium Case with Volt Splash Nike Sport Band.jpg",
+  },
+  {
+    dial: "Gold Titanium",
+    band: "Volt Splash Nike Sport Band",
+    img: "/assets/sideview/46mm Gold Titanium Case with Volt Splash Nike Sport Band.jpg",
+  },
+  {
+    dial: "Slate Titanium",
+    band: "Volt Splash Nike Sport Band",
+    img: "/assets/sideview/46mm Slate Titanium Case with Volt Splash Nike Sport Band.jpg",
+  },
+
+
+  {
+    dial: "Rose Gold Aluminum",
+    band: "Magic Ember Nike Sport Band",
+    img: "/assets/sideview/46mm Rose Gold Aluminum Case with Magic Ember Nike Sport Band.jpg",
+  },
+  {
+    dial: "Silver Aluminum",
+    band: "Magic Ember Nike Sport Band",
+    img: "/assets/sideview/46mm Silver Aluminum Case with Magic Ember Nike Sport Band.jpg",
+  },
+  {
+    dial: "Jet Black",
+    band: "Magic Ember Nike Sport Band",
+    img: "/assets/sideview/46mm Jet Black Aluminum Case with Magic Ember Nike Sport Band.jpg",
+  },
+  {
+    dial: "Natural Titanium",
+    band: "Magic Ember Nike Sport Band",
+    img: "/assets/sideview/46mm Natural Titanium Case with Magic Ember Nike Sport Band.jpg",
+  },
+  {
+    dial: "Gold Titanium",
+    band: "Magic Ember Nike Sport Band",
+    img: "/assets/sideview/46mm Gold Titanium Case with Magic Ember Nike Sport Band.jpg",
+  },
+  {
+    dial: "Slate Titanium",
+    band: "Magic Ember Nike Sport Band",
+    img: "/assets/sideview/46mm Slate Titanium Case with Magic Ember Nike Sport Band.jpg",
+  },
+
+  {
+    dial: "Rose Gold Aluminum",
+    band: "Midnight Sky Nike Sport Band",
+    img: "/assets/sideview/46mm Rose Gold Aluminum Case with Midnight Sky Nike Sport Band.jpg",
+  },
+  {
+    dial: "Silver Aluminum",
+    band: "Midnight Sky Nike Sport Band",
+    img: "/assets/sideview/46mm Silver Aluminum Case with Midnight Sky Nike Sport Band.jpg",
+  },
+  {
+    dial: "Jet Black",
+    band: "Midnight Sky Nike Sport Band",
+    img: "/assets/sideview/46mm Jet Black Aluminum Case with Midnight Sky Nike Sport Band.jpg",
+  },
+  {
+    dial: "Natural Titanium",
+    band: "Midnight Sky Nike Sport Band",
+    img: "/assets/sideview/46mm Natural Titanium Case with Midnight Sky Nike Sport Band.jpg",
+  },
+  {
+    dial: "Gold Titanium",
+    band: "Midnight Sky Nike Sport Band",
+    img: "/assets/sideview/46mm Gold Titanium Case with Midnight Sky Nike Sport Band.jpg",
+  },
+  {
+    dial: "Slate Titanium",
+    band: "Midnight Sky Nike Sport Band",
+    img: "/assets/sideview/46mm Slate Titanium Case with Midnight Sky Nike Sport Band.jpg",
+  },
+
+  {
+    dial: "Rose Gold Aluminum",
+    band: "Pure Platinum Nike Sport Band",
+    img: "/assets/sideview/46mm Rose Gold Aluminum Case with Pure Platinum Nike Sport Band.jpg",
+  },
+  {
+    dial: "Silver Aluminum",
+    band: "Pure Platinum Nike Sport Band",
+    img: "/assets/sideview/46mm Silver Aluminum Case with Pure Platinum Nike Sport Band.jpg",
+  },
+  {
+    dial: "Jet Black",
+    band: "Pure Platinum Nike Sport Band",
+    img: "/assets/sideview/46mm Jet Black Aluminum Case with Pure Platinum Nike Sport Band.jpg",
+  },
+  {
+    dial: "Natural Titanium",
+    band: "Pure Platinum Nike Sport Band",
+    img: "/assets/sideview/46mm Natural Titanium Case with Pure Platinum Nike Sport Band.jpg",
+  },
+  {
+    dial: "Gold Titanium",
+    band: "Pure Platinum Nike Sport Band",
+    img: "/assets/sideview/46mm Gold Titanium Case with Pure Platinum Nike Sport Band.jpg",
+  },
+  {
+    dial: "Slate Titanium",
+    band: "Pure Platinum Nike Sport Band",
+    img: "/assets/sideview/46mm Slate Titanium Case with Pure Platinum Nike Sport Band.jpg",
+  },
+
+
+  {
+    dial: "Rose Gold Aluminum",
+    band: "Desert Stone Nike Sport Band",
+    img: "/assets/sideview/46mm Rose Gold Aluminum Case with Desert Stone Nike Sport Band.jpg",
+  },
+  {
+    dial: "Silver Aluminum",
+    band: "Desert Stone Nike Sport Band",
+    img: "/assets/sideview/46mm Silver Aluminum Case with Desert Stone Nike Sport Band.jpg",
+  },
+  {
+    dial: "Jet Black",
+    band: "Desert Stone Nike Sport Band",
+    img: "/assets/sideview/46mm Jet Black Aluminum Case with Desert Stone Nike Sport Band.jpg",
+  },
+  {
+    dial: "Natural Titanium",
+    band: "Desert Stone Nike Sport Band",
+    img: "/assets/sideview/46mm Natural Titanium Case with Desert Stone Nike Sport Band.jpg",
+  },
+  {
+    dial: "Gold Titanium",
+    band: "Desert Stone Nike Sport Band",
+    img: "/assets/sideview/46mm Gold Titanium Case with Desert Stone Nike Sport Band.jpg",
+  },
+  {
+    dial: "Slate Titanium",
+    band: "Desert Stone Nike Sport Band",
+    img: "/assets/sideview/46mm Slate Titanium Case with Desert Stone Nike Sport Band.jpg",
+  },
+
+
+  {
+    dial: "Rose Gold Aluminum",
+    band: "Cargo Khaki Nike Sport Band",
+    img: "/assets/sideview/46mm Rose Gold Aluminum Case with Cargo Khaki Nike Sport Band.jpg",
+  },
+  {
+    dial: "Silver Aluminum",
+    band: "Cargo Khaki Nike Sport Band",
+    img: "/assets/sideview/46mm Silver Aluminum Case with Cargo Khaki Nike Sport Band.jpg",
+  },
+  {
+    dial: "Jet Black",
+    band: "Cargo Khaki Nike Sport Band",
+    img: "/assets/sideview/46mm Jet Black Aluminum Case with Cargo Khaki Nike Sport Band.jpg",
+  },
+  {
+    dial: "Natural Titanium",
+    band: "Cargo Khaki Nike Sport Band",
+    img: "/assets/sideview/46mm Natural Titanium Case with Cargo Khaki Nike Sport Band.jpg",
+  },
+  {
+    dial: "Gold Titanium",
+    band: "Cargo Khaki Nike Sport Band",
+    img: "/assets/sideview/46mm Gold Titanium Case with Cargo Khaki Nike Sport Band.jpg",
+  },
+  {
+    dial: "Slate Titanium",
+    band: "Cargo Khaki Nike Sport Band",
+    img: "/assets/sideview/46mm Slate Titanium Case with Cargo Khaki Nike Sport Band.jpg",
+  },
+
+  {
+    dial: "Rose Gold Aluminum",
+    band: "Blue Flame Nike Sport Band",
+    img: "/assets/sideview/46mm Rose Gold Aluminum Case with Blue Flame Nike Sport Band.jpg",
+  },
+  {
+    dial: "Silver Aluminum",
+    band: "Blue Flame Nike Sport Band",
+    img: "/assets/sideview/46mm Silver Aluminum Case with Blue Flame Nike Sport Band.jpg",
+  },
+  {
+    dial: "Jet Black",
+    band: "Blue Flame Nike Sport Band",
+    img: "/assets/sideview/46mm Jet Black Aluminum Case with Blue Flame Nike Sport Band.jpg",
+  },
+  {
+    dial: "Natural Titanium",
+    band: "Blue Flame Nike Sport Band",
+    img: "/assets/sideview/46mm Natural Titanium Case with Blue Flame Nike Sport Band.jpg",
+  },
+  {
+    dial: "Gold Titanium",
+    band: "Blue Flame Nike Sport Band",
+    img: "/assets/sideview/46mm Gold Titanium Case with Blue Flame Nike Sport Band.jpg",
+  },
+  {
+    dial: "Slate Titanium",
+    band: "Blue Flame Nike Sport Band",
+    img: "/assets/sideview/46mm Slate Titanium Case with Blue Flame Nike Sport Band.jpg",
   },
 
 ];
