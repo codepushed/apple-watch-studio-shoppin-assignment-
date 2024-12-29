@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 
 import CarouselWithSnap from "../CarouselWithSnap";
 import Tabs from "../Tabs";
@@ -6,19 +7,24 @@ import AppBar from "../AppBar";
 import SizeCarousel from "../CarouselWithSnap/SizeCarousel";
 import BandCarousel from "../CarouselWithSnap/BandCarousel";
 
-import { watchBands, watches } from "../../Static";
+import { sideView, watchBands, watches } from "../../Static";
+import { checkCollection, findSideViewImage } from "@/helpers";
+import { saveIsSideview, saveSideview } from "@/store/slices/studio";
 
 const WatchStudioHero = () => {
   const [isShrunk, setIsShrunk] = useState(false);
   const [isTransitionComplete, setIsTransitionComplete] = useState(false);
-  const [centeredDial, setCenteredDial] = useState(watches[2]);
+  const [centeredDial, setCenteredDial] = useState();
   const [isCarouselVisible, setIsCarouselVisible] = useState(false);
   const [isFading, setIsFading] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [toggleSize, setToggleSize] = useState(false);
   const [watchView, setWatchView] = useState(false);
+  const [watchSideview, setWatchSideview] = useState();
   const [tab, setTab] = useState(1);
-  const [band, setBand] = useState(watchBands[35]);
+  const [band, setBand] = useState();
+  const dispatch = useDispatch();
+  const collection = useSelector((state) => state.studio.collection);
 
   const handleButtonClick = () => {
     setIsLoading(true);
@@ -40,6 +46,24 @@ const WatchStudioHero = () => {
       setIsCarouselVisible(true);
     }, 1000);
   };
+
+  const handleSideView = () => {
+    setWatchView(!watchView);
+    const watchViews = findSideViewImage(sideView, centeredDial, band);
+    setWatchSideview(watchViews);
+    dispatch(saveIsSideview(!watchView));
+    dispatch(saveSideview(watchViews));
+  };
+
+
+  useEffect(() => {
+    const selectedCollection = checkCollection(collection, watches, watchBands);
+    setBand(selectedCollection?.band);
+    setCenteredDial(selectedCollection?.watch);
+    console.log(selectedCollection)
+  }, [collection])
+
+  console.log(collection, "heer")
 
   return (
     <div>
@@ -77,7 +101,7 @@ const WatchStudioHero = () => {
           >
             {watchView ? (
               <div className="watchStudioDial">
-                <img src={band?.sideView} />
+                <img src={watchSideview} />
               </div>
             ) : (
               <>
@@ -109,7 +133,11 @@ const WatchStudioHero = () => {
                   setCenteredDial={setCenteredDial}
                 />
               ) : tab === 1 ? (
-                <CarouselWithSnap setCenteredDial={setCenteredDial} />
+                <CarouselWithSnap
+                  setCenteredDial={setCenteredDial}
+                  watchView={watchView}
+                  watchSideview={watchSideview}
+                />
               ) : (
                 ""
               ))}
@@ -125,7 +153,7 @@ const WatchStudioHero = () => {
             <div className="watchDetailsContainer">
               <p
                 className="watchDetailsView"
-                onClick={() => setWatchView(!watchView)}
+                onClick={() => handleSideView(!watchView)}
               >
                 {!watchView ? "Side view" : "Front view"}
               </p>

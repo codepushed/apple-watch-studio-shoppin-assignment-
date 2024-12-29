@@ -1,4 +1,4 @@
-import cloudinary from '../config/cloudinary';
+import cloudinary from "../config/cloudinary";
 
 export const getBandsType = (items) => {
   return items.filter(
@@ -153,11 +153,12 @@ export const watchesByCollection = (collection, watches) => {
   return watches.filter((item) => item.collection === targetCollection);
 };
 
-
 export const uploadCanvasToCloudinary = async () => {
   try {
-    const watchImage = "/assets/sideview/MYA33ref_FV99_VW_34FR+watch-case-46-aluminum-jetblack-nc-s10_VW_34FR+watch-face-46-aluminum-jetblack-s10_VW_34FR (1).jpeg";
-    const dialImage = "/assets/dials/watch-case-46-aluminum-jetblack-nc-s10_VW_PF+watch-face-46-aluminum-jetblack-s10_VW_PF.png";
+    const watchImage =
+      "/assets/sideview/MYA33ref_FV99_VW_34FR+watch-case-46-aluminum-jetblack-nc-s10_VW_34FR+watch-face-46-aluminum-jetblack-s10_VW_34FR (1).jpeg";
+    const dialImage =
+      "/assets/dials/watch-case-46-aluminum-jetblack-nc-s10_VW_PF+watch-face-46-aluminum-jetblack-s10_VW_PF.png";
     const bandImage = "/assets/MYJD3_FV9.jpeg";
 
     const loadImage = (src) =>
@@ -222,17 +223,28 @@ export const uploadCanvasToCloudinary = async () => {
 
     const rightSquareX = startX + largeSquareSize + padding;
     const verticalGap = 60;
-    const rightSquareY1 = (canvasHeight - (2 * smallSquareSize + verticalGap)) / 2;
+    const rightSquareY1 =
+      (canvasHeight - (2 * smallSquareSize + verticalGap)) / 2;
     const rightSquareY2 = rightSquareY1 + smallSquareSize + verticalGap;
 
     ctx.fillStyle = squareColor;
-    drawRoundedRect(rightSquareX, rightSquareY1, smallSquareSize, smallSquareSize);
+    drawRoundedRect(
+      rightSquareX,
+      rightSquareY1,
+      smallSquareSize,
+      smallSquareSize
+    );
 
     const dialX = rightSquareX + (smallSquareSize - smallImageSize) / 2;
     const dialY = rightSquareY1 + (smallSquareSize - smallImageSize) / 2;
     ctx.drawImage(dialImg, dialX, dialY, smallImageSize, smallImageSize);
 
-    drawRoundedRect(rightSquareX, rightSquareY2, smallSquareSize, smallSquareSize);
+    drawRoundedRect(
+      rightSquareX,
+      rightSquareY2,
+      smallSquareSize,
+      smallSquareSize
+    );
 
     const bandX = rightSquareX + (smallSquareSize - smallImageSize) / 2;
     const bandY = rightSquareY2 + (smallSquareSize - smallImageSize) / 2;
@@ -250,35 +262,87 @@ export const uploadCanvasToCloudinary = async () => {
     const watermarkY2 = canvasHeight - 40;
     ctx.fillText(watermarkText2, watermarkX, watermarkY2);
 
-    const blob = await new Promise((resolve) => 
+    const blob = await new Promise((resolve) =>
       canvas.toBlob(resolve, "image/png")
     );
 
     const formData = new FormData();
-    formData.append('file', blob);
-    formData.append('api_key', process.env.NEXT_PUBLIC_CLOUDINARY_API_KEY);
-    formData.append('timestamp', Math.round((new Date).getTime()/1000));
-    formData.append('upload_preset', 'apple-studio');
+    formData.append("file", blob);
+    formData.append("api_key", process.env.NEXT_PUBLIC_CLOUDINARY_API_KEY);
+    formData.append("timestamp", Math.round(new Date().getTime() / 1000));
+    formData.append("upload_preset", "apple-studio");
 
     const response = await fetch(
       `https://api.cloudinary.com/v1_1/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload`,
       {
-        method: 'POST',
+        method: "POST",
         body: formData,
       }
     );
 
     if (!response.ok) {
       const errorData = await response.json();
-      throw new Error(errorData.error?.message || 'Upload failed');
+      throw new Error(errorData.error?.message || "Upload failed");
     }
 
     const result = await response.json();
     console.log("Upload successful:", result);
     return { success: true, url: result.secure_url };
-
   } catch (error) {
     console.error("Error uploading to Cloudinary:", error);
     return { success: false, error: error.message };
   }
+};
+
+export const findSideViewImage = (sideview, watches, bands) => {
+  for (let i = 0; i < sideview.length; i++) {
+    const view = sideview[i];
+
+    if (watches.name === view.dial && bands.name === view.band) {
+      return view.img;
+    }
+  }
+
+  return null;
+};
+
+export const checkCollection = (collectionNumber, watches, watchBands) => {
+  if (![0, 1, 2].includes(collectionNumber)) {
+    throw new Error("Invalid collection number. Must be 0, 1, or 2");
+  }
+
+  const filteredWatches = watches.filter((watch) => {
+    switch (collectionNumber) {
+      case 0:
+        return watch.collection === "Series 10";
+      case 1:
+        return watch.collection === "Hermes";
+      case 2:
+        return watch.collection === "SE";
+      default:
+        return false;
+    }
+  });
+
+  let result;
+  if (collectionNumber === 0) {
+    result = watches[2];
+  } else if (collectionNumber === 1) {
+    result = watches[6];
+  } else {
+    result = watches[9];
+  }
+
+  if (!result) {
+    return null;
+  }
+
+  const matchingBand = watchBands.find(
+    (band) => band.name === result.band
+  );
+
+  return {
+    watch: result,
+    band: matchingBand || null,
+  };
 };

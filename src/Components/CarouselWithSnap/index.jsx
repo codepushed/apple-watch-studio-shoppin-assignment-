@@ -4,12 +4,13 @@ import { useSelector } from "react-redux";
 import { watches } from "../../Static";
 import { watchesByCollection } from "../../helpers";
 
-const CarouselWithSnap = ({ setCenteredDial }) => {
+const CarouselWithSnap = ({ setCenteredDial, watchView, watchSideview }) => {
   const carouselRef = useRef(null);
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(true);
   const collection = useSelector((state) => state.studio.collection);
-
+  const isSideView = useSelector((state) => state.studio.isSideView);
+  const sideview = useSelector((state) => state.studio.sideview);
 
   const updateScrollButtons = () => {
     if (carouselRef.current) {
@@ -205,11 +206,15 @@ const CarouselWithSnap = ({ setCenteredDial }) => {
     }
   }, []);
 
+  console.log(isSideView, "nonie");
+
   return (
     <div className="carouselContainer">
-      <div className="bandImage">
-        <img src="/assets/watch-band.jpeg" alt="watch-band" />
-      </div>
+      {!isSideView && (
+        <div className="bandImage">
+          <img src="/assets/watch-band.jpeg" alt="watch-band" />
+        </div>
+      )}
 
       <div className="carouselWrapper">
         <button
@@ -236,7 +241,13 @@ const CarouselWithSnap = ({ setCenteredDial }) => {
               key={index}
               onClick={() => handleDialClick(index)}
             >
-              <img src={item.img} alt={item.name} />
+              {isSideView ? (
+                <div className="watchStudioDial">
+                  <img src={sideview} />
+                </div>
+              ) : (
+                <img src={item.img} alt={item.name} />
+              )}
             </div>
           ))}
         </div>
