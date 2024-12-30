@@ -25,29 +25,32 @@ const SaveModal = ({ isSaveModalOpen, handleSaveModalClose }) => {
     }, 1000);
   }, [isCopied]);
 
-  const shareOnX = () => {
-    const textToShare = "Check this out! Apple Watch Studio by @oyemehraxyz";
-    const urlToShare = "https://example.com";
-    const tweetUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(
-      textToShare
-    )}&url=${encodeURIComponent(urlToShare)}`;
-    window.open(tweetUrl, "_blank");
+  const shareOnX = async() => {
+    const data = await uploadCanvasToCloudinary();
+    if(data){
+      const textToShare = "Check this out! Apple Watch Studio by @oyemehraxyz";
+      const urlToShare = data?.url;
+      const tweetUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(
+        textToShare
+      )}&url=${encodeURIComponent(urlToShare)}`;
+      window.open(tweetUrl, "_blank");
+    }
+   
   };
 
-  const shareOnLinkedIn = () => {
+  const shareOnLinkedIn = async() => {
+    const data = await uploadCanvasToCloudinary();
+    if(data){
     const textToShare =
       "Check this out! Apple Watch Studio by https://www.linkedin.com/in/shubhammehracs/";
-    const urlToShare = "https://example.com";
+    const urlToShare = data?.url;
     const linkedInUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(
       urlToShare
     )}&text=${encodeURIComponent(textToShare)}`;
     window.open(linkedInUrl, "_blank");
+  }
   };
 
-  // const handleUploadClick =  async() => {
-  //   const data = await uploadCanvasToCloudinary();
-  //   console.log(data);
-  // };
 
   return (
     <div>
